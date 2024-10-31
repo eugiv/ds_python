@@ -1,5 +1,6 @@
 import math
 
+
 def task_1():
     phrase_1 = str(input("Enter a phrase_1: "))
     phrase_2 = str(input("Enter a phrase_2: "))
@@ -14,6 +15,7 @@ def task_1():
 
 # task_1()
 
+
 def task_2():
     year = int(input("Enter a year: "))
     if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
@@ -24,12 +26,25 @@ def task_2():
 
 # task_2()
 
+
 def task_3():
     day = int(input("Enter you birthday day: "))
     month_input = str(input("Enter you birthday month: "))
 
-    month_list = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь",
-                  "Ноябрь", "Декабрь"]
+    month_list = [
+        "Январь",
+        "Февраль",
+        "Март",
+        "Апрель",
+        "Май",
+        "Июнь",
+        "Июль",
+        "Август",
+        "Сентябрь",
+        "Октябрь",
+        "Ноябрь",
+        "Декабрь",
+    ]
 
     month = month_list.index(month_input) + 1
 
@@ -63,6 +78,7 @@ def task_3():
 
 # task_3()
 
+
 def task_4():
     w = float(input("Enter a weight: "))
     h = float(input("Enter a height: "))
@@ -80,12 +96,13 @@ def task_4():
 
 # task_4()
 
+
 def task_5():
     lucky_ticket = str(input("Try your luck (only even numbers): "))
 
     if isinstance(lucky_ticket, str) and len(lucky_ticket) % 2 == 0:
-        first_half = lucky_ticket[:len(lucky_ticket) // 2]
-        second_half = lucky_ticket[len(lucky_ticket) // 2:]
+        first_half = lucky_ticket[: len(lucky_ticket) // 2]
+        second_half = lucky_ticket[len(lucky_ticket) // 2 :]
 
         sum_first_half = sum(int(num) for num in first_half)
         sum_second_half = sum(int(num) for num in second_half)
@@ -100,20 +117,26 @@ def task_5():
 
 # task_5()
 
+
 def task_6():
     figure = str(input("Введите тип фигуры (Круг, Треугольник, Прямоугольник): "))
 
     if figure == "Круг":
         p = 3.14
         r = float(input("Введите радиус круга: "))
-        a = p * (r ** 2)
+        a = p * (r**2)
         print("Площадь круга: ", a)
     elif figure == "Треугольник":
         a_side = float(input("Введите длину стороны A: "))
         b_side = float(input("Введите длину стороны B: "))
         c_side = float(input("Введите длину стороны C: "))
-        perim_half = (a_side+b_side+c_side)/2
-        a_heron = math.sqrt(perim_half * (perim_half - a_side) * (perim_half - b_side) * (perim_half - c_side))
+        perim_half = (a_side + b_side + c_side) / 2
+        a_heron = math.sqrt(
+            perim_half
+            * (perim_half - a_side)
+            * (perim_half - b_side)
+            * (perim_half - c_side)
+        )
         print("Площадь треугольника: ", a_heron)
     elif figure == "Прямоугольник":
         a_side = float(input("Введите длину стороны A: "))
