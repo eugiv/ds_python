@@ -7,32 +7,58 @@ DOCUMENTS = [
 DIRECTORIES = {"1": ["2207 876234", "11-2"], "2": ["10006"], "3": []}
 
 
-def docs_search(cmd: str):
-    valid_comm = {"doc": "p", "shelf": "s", "quit": "q"}
+def data_search(cmd: str):
+    select_cmd = {"doc": "p", "shelve": "s", "quit": "q"}
+    full_cmd = {
+        "full": "/",
+    }
+
     while True:
         if not cmd:
-            cmd = input("Выбери команду 'p', 's', или 'q': ")
+            cmd = input("Выбери команду 'p', 's', '/' или 'q': ")
 
-        elif cmd == valid_comm["quit"]:
+        elif cmd == select_cmd["quit"]:
             print("сессия окончена, пока")
             break
 
         else:
-            doc_num = input("Введите номер документа: ")
-            if cmd == valid_comm["doc"]:
+            shelve = lambda param: "".join(
+                [k for k, v in DIRECTORIES.items() if param in v]
+            )
+
+            if cmd in select_cmd.values():
+                doc_num = input("Введите номер документа: ")
                 doc = [x for x in DOCUMENTS if doc_num in x.values()]
-                if doc:
-                    doc_owner = doc[0]["name"]
-                    print(f"\nВладелец документа: {doc_owner}")
-                    return doc_owner
 
-            elif cmd == valid_comm["shelf"]:
-                shelf = "".join([k for k, v in DIRECTORIES.items() if doc_num in v])
-                if shelf:
-                    print(f"\nДокумент хранится на полке: {shelf}")
-                    return shelf
+                if cmd == select_cmd["doc"]:
+                    if doc:
+                        doc_owner = doc[0]["name"]
+                        print(f"\nВладелец документа: {doc_owner}")
+                        return doc_owner
 
-            return print("\nДокумент не найден в базе")
+                elif cmd == select_cmd["shelve"]:
+                    if shelve(doc_num):
+                        print(f"\nДокумент хранится на полке: {shelve(doc_num)}")
+                        return shelve(doc_num)
+
+                return print("\nДокумент не найден в базе")
+
+            if cmd in full_cmd.values():
+                if cmd == full_cmd["full"]:
+
+                    cnt = 0
+                    for i in DOCUMENTS:
+                        res = {
+                            "№: ": list(i.values())[1],
+                            "тип: ": list(i.values())[0],
+                            "владелец: ": list(i.values())[2],
+                            "полка хранения: ": shelve(list(i.values())[1]),
+                        }
+                        res = "; ".join(f"{key}{value}" for key, value in res.items())
+                        print(res)
+                        cnt += 1
+                        if cnt == len(DOCUMENTS):
+                            return
 
 
-docs_search(input("Введите команду: "))
+data_search(input("Введите команду: "))
