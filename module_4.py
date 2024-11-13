@@ -12,10 +12,15 @@ def data_search(cmd: str):
     full_cmd = {
         "full": "/",
     }
+    action_cmd = {"add_shelve": "ads", "remove_shelve": "ds"}
 
     while True:
-        if not cmd:
-            cmd = input("Выбери команду 'p', 's', '/' или 'q': ")
+        if (
+            cmd not in select_cmd.values()
+            and cmd not in full_cmd.values()
+            and cmd not in action_cmd.values()
+        ):
+            cmd = input("Выбери команду 'p', 's', '/', 'ads', 'ds' или 'q': ")
 
         elif cmd == select_cmd["quit"]:
             print("сессия окончена, пока")
@@ -45,7 +50,6 @@ def data_search(cmd: str):
 
             if cmd in full_cmd.values():
                 if cmd == full_cmd["full"]:
-
                     cnt = 0
                     for i in DOCUMENTS:
                         res = {
@@ -59,6 +63,38 @@ def data_search(cmd: str):
                         cnt += 1
                         if cnt == len(DOCUMENTS):
                             return
+
+            if cmd in action_cmd.values():
+                shelve_num = str(int(input("Введите номер полки: ")))
+                shelves_order = lambda dirs: ",".join([x for x in dirs])
+
+                if cmd == action_cmd["add_shelve"]:
+                    if shelve_num not in DIRECTORIES:
+                        DIRECTORIES[shelve_num] = []
+                        return print(
+                            f"Полка добавлена. Текущий перечень полок: {shelves_order(DIRECTORIES)}"
+                        )
+                    else:
+                        return print(
+                            f"Такая полка уже существует. Текущий перечень полок: {shelves_order(DIRECTORIES)}"
+                        )
+
+                if cmd == action_cmd["remove_shelve"]:
+                    if shelve_num in DIRECTORIES and DIRECTORIES[shelve_num] == []:
+                        del DIRECTORIES[shelve_num]
+                        return print(
+                            f"Полка удалена. Текущий перечень полок: {shelves_order(DIRECTORIES)}"
+                        )
+
+                    elif DIRECTORIES.get("shelve_num"):
+                        return print(
+                            f"На полке есть документа, удалите их перед удалением полки. Текущий перечень полок: {shelves_order(DIRECTORIES)}"
+                        )
+
+                    else:
+                        return print(
+                            f"Такой полки не существует. Текущий перечень полок: {shelves_order(DIRECTORIES)}"
+                        )
 
 
 data_search(input("Введите команду: "))
