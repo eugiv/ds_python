@@ -52,8 +52,8 @@ class Designer(Employee):
         return self.publish_grade()
 
 
-if __name__ == '__main__':
-    d = Designer('Jack', 0, 2)
+if __name__ == "__main__":
+    d = Designer("Jack", 0, 2)
 
     for i in range(10):
         d.check_if_it_is_time_for_upgrade()
