@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="blacked" />
+    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="blacked">
+      <change afterPath="$PROJECT_DIR$/pandas_python/pd_module_3/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas_python/pd_module_3/pd_module_3.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas_python/pd_module_3/visit_log.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +60,7 @@
     &quot;Python.rate_cls.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/eugene_ivanov/PycharmProjects/ds_python&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/eugene_ivanov/PycharmProjects/ds_python/pandas_python/pd_module_2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -67,9 +72,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pandas_python/pd_module_2" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pandas_python/pd_module_3" />
+      <recent name="$PROJECT_DIR$/pandas_python/pd_module_2" />
       <recent name="$PROJECT_DIR$/pandas_python/pd_module_1" />
       <recent name="$PROJECT_DIR$/pure_python" />
       <recent name="$PROJECT_DIR$" />
@@ -137,6 +145,9 @@
       <workItem from="1733163736477" duration="6233000" />
       <workItem from="1734359253630" duration="2349000" />
       <workItem from="1734361793381" duration="5978000" />
+      <workItem from="1736240747687" duration="12678000" />
+      <workItem from="1736530107047" duration="918000" />
+      <workItem from="1736718951973" duration="1882000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
@@ -166,8 +177,8 @@
     <option name="LAST_COMMIT_MESSAGE" value="blacked" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ds_python$designer_cls.coverage" NAME="designer_cls Coverage Results" MODIFIED="1733169130777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ds_python$pd_module_1.coverage" NAME="pd_module_1 Coverage Results" MODIFIED="1734361576926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pandas_python/pd_module_1" />
+    <SUITE FILE_PATH="coverage/ds_python$designer_cls.coverage" NAME="designer_cls Coverage Results" MODIFIED="1736243597164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ds_python$module_4.coverage" NAME="module_4 Coverage Results" MODIFIED="1731724166671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ds_python$module_2.coverage" NAME="module_2 Coverage Results" MODIFIED="1730396076327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ds_python$main.coverage" NAME="main Coverage Results" MODIFIED="1729893552679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
