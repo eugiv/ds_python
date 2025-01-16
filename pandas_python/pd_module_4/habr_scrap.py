@@ -75,9 +75,12 @@ def main(keywords: list, page=1):
 
         return df
     except:
-        print("Wrong parameters, try again")
+        print(
+            f"Wrong parameters, try again. Habr site response status code: "
+            f"{requests.get('https://habr.com/ru/search/').status_code}"
+        )
 
 
 if __name__ == "__main__":
-    keywords = ["python", "анализ данных"]
-    print(main(keywords, 10))
+    KEYWORDS = ["python", "анализ данных"]
+    print(main(KEYWORDS, 10))
