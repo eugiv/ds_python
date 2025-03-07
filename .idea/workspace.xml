@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="stat_module_3 changes">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statistics_python/stat_module_3/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQL/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQL/m2-utf8.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4675c57-1372-453e-9273-fc3ed2aaf46a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f4675c57-1372-453e-9273-fc3ed2aaf46a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4675c57-1372-453e-9273-fc3ed2aaf46a/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f4675c57-1372-453e-9273-fc3ed2aaf46a/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,53 +48,66 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.designer_cls.executor&quot;: &quot;Run&quot;,
-    &quot;Python.habr_scrap.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_4.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_6.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_7.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pd_module_1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.rate_cls.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;Excel (xlsx)&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/eugene_ivanov/PycharmProjects/ds_python/pandas_python/pd_module_2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Database Script.m2-utf8.sql.executor": "Run",
+    "Python.designer_cls.executor": "Run",
+    "Python.habr_scrap.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.module_2.executor": "Run",
+    "Python.module_3.executor": "Run",
+    "Python.module_4.executor": "Run",
+    "Python.module_5.executor": "Run",
+    "Python.module_6.executor": "Run",
+    "Python.module_7.executor": "Run",
+    "Python.pd_module_1.executor": "Run",
+    "Python.rate_cls.executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "database.data.extractors.current.export.id": "Excel (xlsx)",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/eugene_ivanov/PycharmProjects/ds_python/pandas_python/pd_module_2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "database.query.execution",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ],
+    "RunConfigurationTargetLRU": [
+      "f4675c57-1372-453e-9273-fc3ed2aaf46a/database/\"postgres\"/schema/\"public\""
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "PostgreSQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pandas_python/pd_module_2" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SQL" />
       <recent name="$PROJECT_DIR$/statistics_python/stat_module_3" />
       <recent name="$PROJECT_DIR$/statistics_python" />
       <recent name="$PROJECT_DIR$/pandas_python/pd_module_3" />
       <recent name="$PROJECT_DIR$/pandas_python/pd_module_2" />
-      <recent name="$PROJECT_DIR$/pandas_python/pd_module_1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.designer_cls">
+  <component name="RunManager" selected="Database Script.m2-utf8.sql">
+    <configuration name="m2-utf8.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/SQL/m2-utf8.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="f4675c57-1372-453e-9273-fc3ed2aaf46a" namespace="database/&quot;postgres&quot;/schema/&quot;public&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="designer_cls" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ds_python" />
       <option name="ENV_FILES" value="" />
@@ -164,6 +179,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Database Script.m2-utf8.sql" />
         <item itemvalue="Python.designer_cls" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.habr_scrap" />
@@ -230,6 +246,10 @@
       <workItem from="1740873457053" duration="1009000" />
       <workItem from="1740915207599" duration="12000" />
       <workItem from="1740992660456" duration="218000" />
+      <workItem from="1741094257939" duration="15144000" />
+      <workItem from="1741157538194" duration="9350000" />
+      <workItem from="1741189199467" duration="2142000" />
+      <workItem from="1741365503835" duration="1470000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
