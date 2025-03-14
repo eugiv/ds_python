@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="stat_module_3 changes" />
+    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="stat_module_3 changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/statistics_python/stat_module_4/stat_module_4.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/statistics_python/stat_module_4/stat_module_4.ipynb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +66,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;database.data.extractors.current.export.id&quot;: &quot;Excel (xlsx)&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/eugene_ivanov/PycharmProjects/ds_python/pandas_python/pd_module_2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/eugene_ivanov/PycharmProjects/ds_python/statistics_python/stat_module_4&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -86,6 +89,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/statistics_python/stat_module_4" />
       <recent name="$PROJECT_DIR$/pandas_python/pd_module_2" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -247,6 +251,12 @@
       <workItem from="1741189199467" duration="2142000" />
       <workItem from="1741365503835" duration="1470000" />
       <workItem from="1741366982979" duration="11398000" />
+      <workItem from="1741710941240" duration="5526000" />
+      <workItem from="1741766176058" duration="998000" />
+      <workItem from="1741770021687" duration="599000" />
+      <workItem from="1741774260198" duration="14536000" />
+      <workItem from="1741853590882" duration="458000" />
+      <workItem from="1741960976520" duration="16959000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
