@@ -59,7 +59,7 @@ FROM city AS ct
 SELECT CONCAT_WS(' ', c.last_name, c.first_name) AS "Фамилия и имя покупателя" ,COUNT(r.rental_id) AS "Количество фильмов"
 FROM rental AS r
 JOIN customer AS c ON c.customer_id = r.customer_id
-GROUP BY c.last_name, c.first_name
+GROUP BY c.customer_id
 ORDER BY "Количество фильмов" DESC
 LIMIT 5;
 
@@ -71,12 +71,13 @@ LIMIT 5;
 --  3. минимальное значение платежа за аренду фильма
 --  4. максимальное значение платежа за аренду фильма
 
-SELECT CONCAT_WS(' ', c.last_name, c.first_name) AS "Фамилия и имя покупателя" ,COUNT(p.rental_id) AS "Количество фильмов",
+SELECT CONCAT_WS(' ', c.last_name, c.first_name) AS "Фамилия и имя покупателя" ,COUNT(r.rental_id) AS "Количество фильмов",
        ROUND(SUM(p.amount), 0) AS "Общая стоимость платежей", MIN(p.amount) AS "Минимальная стоимость платежа",
        MAX(p.amount) AS "Максимальная стоимость платежа"
 FROM payment AS p
 JOIN customer AS c ON c.customer_id = p.customer_id
-GROUP BY c.last_name, c.first_name;
+JOIN rental AS r ON r.rental_id =p.rental_id
+GROUP BY c.customer_id;
 
 
 --ЗАДАНИЕ №5
@@ -113,16 +114,17 @@ WITH rental_data AS (
     ),
 
     movie_genre_rental AS (
-    SELECT fc.film_id, c.name, rd.r_c, rd.a_s FROM category AS c
+    SELECT fc.film_id, STRING_AGG(c.name, ', ') AS genres, rd.r_c, rd.a_s FROM category AS c
     JOIN film_category AS fc ON fc.category_id = c.category_id
     LEFT JOIN rental_data AS rd ON rd.film_id = fc.film_id
+    GROUP BY fc.film_id, rd.r_c, rd.a_s
     )
 
-SELECT title AS "Название фильма", rating AS "Рейтинг", mgr.name AS "Жанр", release_year AS "Год выпуска",
+SELECT f.title AS "Название фильма", f.rating AS "Рейтинг", mgr.genres AS "Жанр", release_year AS "Год выпуска",
        l.name AS "Язык", COALESCE(mgr.r_c, 0) AS "Количество аренд", COALESCE(mgr.a_s, 0) AS "Общая стоимость аренды" FROM film AS f
 LEFT JOIN movie_genre_rental AS mgr ON mgr.film_id = f.film_id
 JOIN "language" AS l ON l.language_id = f.language_id
-ORDER BY title;
+ORDER BY f.title;
 
 
 --ЗАДАНИЕ №2
@@ -136,12 +138,13 @@ WITH rental_data AS (
     ),
 
     movie_genre_rental AS (
-    SELECT fc.film_id, rd.film_id AS inv_film_id, c.name, rd.r_c, rd.a_s FROM category AS c
+    SELECT fc.film_id, rd.film_id AS inv_film_id, STRING_AGG(c.name, ', ') AS genre, rd.r_c, rd.a_s FROM category AS c
     JOIN film_category AS fc ON fc.category_id = c.category_id
     LEFT JOIN rental_data AS rd ON rd.film_id = fc.film_id
+    GROUP BY fc.film_id, rd.r_c, rd.film_id, rd.a_s
     )
 
-SELECT title AS "Название фильма", rating AS "Рейтинг", mgr.name AS "Жанр", release_year AS "Год выпуска",
+SELECT title AS "Название фильма", rating AS "Рейтинг", mgr.genre AS "Жанр", release_year AS "Год выпуска",
        l.name AS "Язык", COALESCE(mgr.r_c, 0) AS "Количество аренд", mgr.a_s AS "Общая стоимость аренды" FROM film AS f
 LEFT JOIN movie_genre_rental AS mgr ON mgr.film_id = f.film_id
 JOIN "language" AS l ON l.language_id = f.language_id
@@ -153,11 +156,12 @@ ORDER BY title;
 --Посчитайте количество продаж, выполненных каждым продавцом. Добавьте вычисляемую колонку "Премия".
 --Если количество продаж превышает 7300, то значение в колонке будет "Да", иначе должно быть значение "Нет".
 
-SELECT staff_id, COUNT(payment_id) AS "Количество продаж",
+SELECT s.staff_id, COUNT(p.payment_id) AS "Количество продаж",
 CASE
     WHEN COUNT(payment_id) > 7300
     THEN 'Да'
     ELSE 'Нет'
 END AS "Премия"
-FROM payment
-GROUP BY staff_id
+FROM payment AS p
+RIGHT JOIN staff AS s ON s.staff_id=p.staff_id
+GROUP BY s.staff_id;

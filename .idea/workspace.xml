@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="stat_module_3 changes" />
+    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="stat_module_3 changes">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4675c57-1372-453e-9273-fc3ed2aaf46a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f4675c57-1372-453e-9273-fc3ed2aaf46a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4675c57-1372-453e-9273-fc3ed2aaf46a/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f4675c57-1372-453e-9273-fc3ed2aaf46a/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/sql_module_3/m3-utf8.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/sql_module_3/m3-utf8.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -255,6 +260,10 @@
       <workItem from="1741853590882" duration="458000" />
       <workItem from="1741960976520" duration="18112000" />
       <workItem from="1742111376401" duration="9848000" />
+      <workItem from="1742297148792" duration="27437000" />
+      <workItem from="1742383486380" duration="1096000" />
+      <workItem from="1742385050885" duration="1607000" />
+      <workItem from="1742624507153" duration="3112000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
