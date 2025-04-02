@@ -16,5 +16,25 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="netology_sql_eug_wp" uuid="ef71ca5f-70ee-418d-9a6a-89842285562a">
+      <database-info product="PostgreSQL" version="10.9 (Ubuntu 10.9-0ubuntu0.18.04.1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.7.3" dbms="POSTGRES" exact-version="10.9" exact-driver-version="42.7">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>netology</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node negative="1">
+            <node kind="database" qname="@">
+              <node kind="schema" qname="@" />
+            </node>
+            <node kind="database" qname="workplace">
+              <node kind="schema" qname="ivanov_module_4_sql_1" />
+            </node>
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
   </component>
 </project>

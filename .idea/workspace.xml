@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="stat_module_3 changes">
-      <change afterPath="$PROJECT_DIR$/statistics_python/stat_module_5/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statistics_python/stat_module_5/gas_sales_data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statistics_python/stat_module_5/happines_corruption.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statistics_python/stat_module_5/stat_module_5.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQL/sql_module_4/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4675c57-1372-453e-9273-fc3ed2aaf46a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f4675c57-1372-453e-9273-fc3ed2aaf46a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4675c57-1372-453e-9273-fc3ed2aaf46a/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f4675c57-1372-453e-9273-fc3ed2aaf46a/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/statistics_python/stat_module_3/ДЗ_Проверка_гипотез.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/statistics_python/stat_module_3/ДЗ_Проверка_гипотез.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -269,7 +269,10 @@
       <workItem from="1742648406339" duration="4705000" />
       <workItem from="1742655919514" duration="24000" />
       <workItem from="1742713359823" duration="4000" />
-      <workItem from="1742908266444" duration="12865000" />
+      <workItem from="1742908266444" duration="14757000" />
+      <workItem from="1743283615617" duration="1650000" />
+      <workItem from="1743285298124" duration="722000" />
+      <workItem from="1743286030619" duration="170000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
