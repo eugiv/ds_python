@@ -78,7 +78,14 @@ FROM cte_sum_amount;
 --дополнительную скидку на следующую аренду. С помощью оконной функции выведите всех покупателей,
 --которые в день проведения акции получили скидку
 
+WITH cte_payment_number AS (
+    SELECT customer_id, payment_date,
+        ROW_NUMBER() OVER(ORDER BY payment_date) AS payment_number
+    FROM payment
+    WHERE payment_date::date = '2005-08-20')
 
+SELECT * FROM cte_payment_number
+WHERE payment_number % 100 = 0;
 
 
 --ЗАДАНИЕ №3
@@ -87,8 +94,32 @@ FROM cte_sum_amount;
 -- 2. покупатель, арендовавший фильмов на самую большую сумму
 -- 3. покупатель, который последним арендовал фильм
 
+WITH cte_cust_rental AS (
+    SELECT c.customer_id, CONCAT_WS(' ', c.first_name, c.last_name) AS full_name, cn.country,
+        COUNT(r.rental_id) AS rental_count,
+        SUM(p.amount) AS amount_sum,
+        MAX(r.rental_date) AS last_rental_date
+    FROM customer AS c
+    JOIN rental AS r ON r.customer_id = c.customer_id
+    JOIN payment AS p ON r.rental_id = p.rental_id
+    JOIN address AS a ON a.address_id = c.address_id
+    JOIN city AS ct ON ct.city_id = a.city_id
+    JOIN country AS cn ON cn.country_id = ct.country_id
+    GROUP BY c.customer_id, full_name, cn.country
+),
 
+cte_cust_rank AS (
+    SELECT country, full_name, rental_count, amount_sum, last_rental_date,
+        RANK() OVER (PARTITION BY country ORDER BY rental_count DESC) AS rental_rank,
+        RANK() OVER (PARTITION BY country ORDER BY amount_sum DESC) AS amount_rank,
+        RANK() OVER (PARTITION BY country ORDER BY last_rental_date DESC) AS rental_date_rank
+    FROM cte_cust_rental
+)
 
-
-
-
+SELECT country AS "Страна",
+    MAX(CASE WHEN rental_rank = 1 THEN full_name END) AS "Покупатель, арендовавший наибольшее кол-во фильмов",
+    MAX(CASE WHEN amount_rank = 1 THEN full_name END) AS "Покупатель, арендовавший на самую большую сумму",
+    MAX(CASE WHEN rental_date_rank = 1 THEN full_name END) AS "Покупатель, который последним арендовал фильм"
+FROM cte_cust_rank
+GROUP BY country
+ORDER BY country;
