@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="stat_module_3 changes">
-      <change afterPath="$PROJECT_DIR$/SQL/sql_module_5/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SQL/sql_module_5/m5-utf8.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQL/sql_module_6/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQL/sql_module_6/m6-utf8.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,11 +96,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SQL/sql_module_6" />
       <recent name="$PROJECT_DIR$/SQL/sql_module_5" />
       <recent name="$PROJECT_DIR$/SQL/sql_module_4" />
       <recent name="$PROJECT_DIR$/statistics_python/stat_module_5" />
       <recent name="$PROJECT_DIR$/SQL/sql_module_3" />
-      <recent name="$PROJECT_DIR$/SQL/sql_module_2" />
     </key>
   </component>
   <component name="RunManager" selected="Database Script.m2-utf8.sql">
@@ -274,7 +274,8 @@
       <workItem from="1743584787816" duration="11762000" />
       <workItem from="1743609792529" duration="30000" />
       <workItem from="1743834232528" duration="4000" />
-      <workItem from="1743941660968" duration="10860000" />
+      <workItem from="1743941660968" duration="23925000" />
+      <workItem from="1744189040392" duration="3259000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
