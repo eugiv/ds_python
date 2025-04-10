@@ -8,7 +8,7 @@ SET search_path TO public;
 --Напишите SQL-запрос, который выводит всю информацию о фильмах 
 --со специальным атрибутом "Behind the Scenes".
 
-SELECT film_id, INITCAP(title), special_features FROM film
+SELECT film_id, INITCAP(title) AS title, special_features FROM film
 WHERE 'Behind the Scenes' = any(special_features);
 
 
@@ -16,10 +16,10 @@ WHERE 'Behind the Scenes' = any(special_features);
 --Напишите еще 2 варианта поиска фильмов с атрибутом "Behind the Scenes",
 --используя другие функции или операторы языка SQL для поиска значения в массиве.
 
-SELECT film_id, INITCAP(title), special_features FROM film
+SELECT film_id, INITCAP(title) AS title, special_features FROM film
 WHERE 'Behind the Scenes' IN (SELECT unnest(special_features));
 
-SELECT film_id, INITCAP(title), special_features FROM film
+SELECT film_id, INITCAP(title) AS title, special_features FROM film
 WHERE special_features @> ARRAY['Behind the Scenes'];
 
 
@@ -30,8 +30,16 @@ WHERE special_features @> ARRAY['Behind the Scenes'];
 --Обязательное условие для выполнения задания: используйте запрос из задания 1, 
 --помещенный в CTE. CTE необходимо использовать для решения задания.
 
+WITH cte_1 AS (
+    SELECT film_id, INITCAP(title) AS title, special_features FROM film
+    WHERE 'Behind the Scenes' = any(special_features)
+    )
 
-
+SELECT customer_id, COUNT(customer_id) AS film_count FROM cte_1 AS c1
+JOIN inventory AS i ON i.film_id = c1.film_id
+JOIN rental AS r ON i.inventory_id = r.inventory_id
+GROUP BY customer_id
+ORDER BY customer_id;
 
 
 --ЗАДАНИЕ №4
@@ -41,16 +49,29 @@ WHERE special_features @> ARRAY['Behind the Scenes'];
 --Обязательное условие для выполнения задания: используйте запрос из задания 1,
 --помещенный в подзапрос, который необходимо использовать для решения задания.
 
-
-
+SELECT customer_id, COUNT(customer_id) AS film_count FROM
+    (SELECT film_id, INITCAP(title) AS title, special_features FROM film
+    WHERE 'Behind the Scenes' = any(special_features)) AS sbq_1
+JOIN inventory AS i ON i.film_id = sbq_1.film_id
+JOIN rental AS r ON i.inventory_id = r.inventory_id
+GROUP BY customer_id
+ORDER BY customer_id;
 
 
 --ЗАДАНИЕ №5
 --Создайте материализованное представление с запросом из предыдущего задания
 --и напишите запрос для обновления материализованного представления
 
+CREATE MATERIALIZED VIEW customer_film_count AS
+    SELECT customer_id, COUNT(customer_id) AS film_count FROM
+        (SELECT film_id, INITCAP(title) AS title, special_features FROM film
+        WHERE 'Behind the Scenes' = any(special_features)) AS sbq_1
+    JOIN inventory AS i ON i.film_id = sbq_1.film_id
+    JOIN rental AS r ON i.inventory_id = r.inventory_id
+    GROUP BY customer_id
+    ORDER BY customer_id;
 
-
+REFRESH MATERIALIZED VIEW customer_film_count;
 
 
 --ЗАДАНИЕ №6
@@ -60,7 +81,16 @@ WHERE special_features @> ARRAY['Behind the Scenes'];
 --2. какой вариант вычислений затрачивает меньше ресурсов системы: 
 --с использованием CTE или с использованием подзапроса.
 
+-- 1) cost: 78.84
+-- 2.1) cost: 452.5
+-- 2.2) cost: 68.84
+-- 3) cost: 819.16
+-- 4) cost: 685.47
 
+--      Ответы на вопросы:
+--      1) Наименьшая стоимость запроса в 2.2, так как оператор "@>" лучше оптимизирован для работы в массивах
+--      2) В данном случае стомость выполенения подзапроса дешевле, так как он относитально простой
+--          и не требует повторных вычислений (в этом случае CTE могла бы быть эфеективнее)
 
 
 
@@ -73,8 +103,20 @@ WHERE special_features @> ARRAY['Behind the Scenes'];
 --Используя оконную функцию выведите для каждого сотрудника
 --сведения о самой первой продаже этого сотрудника.
 
+WITH cte_1 AS (
+    SELECT s.staff_id, f.film_id, f.title, p.amount, p.payment_date,
+       c.last_name AS customer_last_name, c.first_name AS customer_first_name,
+       ROW_NUMBER() OVER (PARTITION BY p.staff_id ORDER BY payment_date) AS sales_num
+    FROM staff AS s
+JOIN payment AS p ON p.staff_id = s.staff_id
+JOIN rental AS r ON r.rental_id = p.rental_id
+JOIN customer AS c ON c.customer_id = r.customer_id
+JOIN inventory AS i ON i.inventory_id = r.inventory_id
+JOIN film AS f ON f.film_id = i.film_id)
 
-
+SELECT staff_id, film_id, title, amount, payment_date, customer_last_name,
+    customer_first_name FROM cte_1
+WHERE sales_num = 1;
 
 
 --ЗАДАНИЕ №3
