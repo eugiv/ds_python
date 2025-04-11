@@ -126,6 +126,26 @@ WHERE sales_num = 1;
 -- 3. день, в который продали фильмов на наименьшую сумму (день в формате год-месяц-день)
 -- 4. сумму продажи в этот день
 
+WITH days_rent_count AS (
+        SELECT i.store_id, r.rental_date::date, COUNT(r.inventory_id) AS total_rentals,
+            ROW_NUMBER() OVER (PARTITION BY i.store_id ORDER BY COUNT(r.inventory_id) DESC) AS store_rank
+        FROM rental AS r
+        JOIN inventory AS i ON i.inventory_id = r.inventory_id
+        GROUP BY i.store_id, r.rental_date::date),
 
+    rent_amount AS (
+        SELECT s.store_id, p.payment_date::date, SUM(p.amount) AS ttl_amount,
+            ROW_NUMBER() OVER (PARTITION BY s.store_id ORDER BY SUM(p.amount)) AS payment_rank
+        FROM payment AS p
+        JOIN staff AS s ON s.staff_id = p.staff_id
+        GROUP BY s.store_id, p.payment_date::date)
 
-
+SELECT
+drc.store_id AS "ID магазина",
+drc.rental_date AS "День, в который арендовали больше всего фильмов",
+drc.total_rentals AS "Количество фильмов, взятых в аренду в этот день",
+ra.payment_date AS "День, в который продали фильмов на наименьшую сумму",
+ra.ttl_amount AS "Сумма продажи в этот день"
+FROM days_rent_count AS drc
+JOIN rent_amount AS ra ON ra.store_id = drc.store_id AND ra.payment_rank = 1
+WHERE drc.store_rank = 1;
