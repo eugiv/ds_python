@@ -35,15 +35,35 @@ HAVING NOT ARRAY_AGG(s.fare_conditions) @> ARRAY['Business']::varchar[];
 --ЗАДАНИЕ №4
 --Вывести накопительный итог количества мест в самолетах по каждому аэропорту на каждый день, учитывая только те самолеты, которые летали пустыми и только те дни, где из одного аэропорта таких самолетов вылетало более одного.
 --В результате должны быть код аэропорта, дата, количество пустых мест в самолете и накопительный итог.
--- 1. код аэропорта вылета, 2. дата вылета, 3. кол-во пустых мест в самолете, 4. накопительный итог
--- 2 СТЕ если решаем через окно
--- найти корректный критерий, что на самолет не сел ни один из пассажиров (полностью пустые самолеты)
--- посчитать кол-во мест в каждом самолете
--- понять из какого аэропорта и в какой день вылетало более 1го пустого самолета
--- в ответе 4330 строк +-
 
-SELECT f.flight_id, COUNT(bp.boarding_no) count_bp FROM flights AS f
-LEFT JOIN ticket_flights AS tf ON tf.flight_id = f.flight_id
-LEFT JOIN boarding_passes AS bp ON tf.ticket_no = bp.ticket_no
-GROUP BY f.flight_id
-HAVING COUNT(bp.boarding_no) = 0 -- логика нахождения полностью пустых самолетов
+WITH empty_flights AS (
+        SELECT f.flight_id FROM flights AS f
+        LEFT JOIN ticket_flights AS tf ON tf.flight_id = f.flight_id
+        LEFT JOIN boarding_passes AS bp ON tf.ticket_no = bp.ticket_no
+        GROUP BY f.flight_id
+        HAVING COUNT(bp.boarding_no) = 0
+),
+
+    seats_cumulative AS (
+        SELECT f.departure_airport, f.actual_departure::date, COUNT(s.seat_no) empty_seats_per_aircraft,
+            SUM(COUNT(s.seat_no)) OVER (PARTITION BY f.departure_airport, f.actual_departure::date ORDER BY
+                f.actual_departure) AS seats_cum_sum,
+            COUNT(f.actual_departure::date) OVER (PARTITION BY f.departure_airport,
+                f.actual_departure::date) AS days_count_by_airport
+        FROM flights AS f
+        JOIN empty_flights AS ef ON ef.flight_id = f.flight_id
+        JOIN aircrafts AS a ON a.aircraft_code = f.aircraft_code
+        JOIN seats AS s ON s.aircraft_code = a.aircraft_code
+        WHERE f.actual_departure IS NOT NULL
+        GROUP BY f.departure_airport, f.actual_departure
+)
+
+SELECT departure_airport, actual_departure, empty_seats_per_aircraft, seats_cum_sum FROM seats_cumulative
+WHERE days_count_by_airport > 1
+ORDER BY departure_airport, actual_departure;
+
+
+--ЗАДАНИЕ №5
+--Найдите процентное соотношение перелетов по маршрутам от общего количества перелетов.
+--Выведите в результат названия аэропортов и процентное отношение.
+--Решение должно быть через оконную функцию.
