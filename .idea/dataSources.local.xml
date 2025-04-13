@@ -10,8 +10,8 @@
       <user-name>netology</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="database" qname="@">
-            <node kind="schema" qname="@" />
+          <node kind="database" qname="total">
+            <node kind="schema" qname="bookings" />
           </node>
         </introspection-scope>
       </schema-mapping>
