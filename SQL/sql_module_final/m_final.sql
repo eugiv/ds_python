@@ -38,10 +38,8 @@ HAVING NOT ARRAY_AGG(s.fare_conditions) @> ARRAY['Business']::varchar[];
 
 WITH empty_flights AS (
         SELECT f.flight_id FROM flights AS f
-        LEFT JOIN ticket_flights AS tf ON tf.flight_id = f.flight_id
-        LEFT JOIN boarding_passes AS bp ON tf.ticket_no = bp.ticket_no
-        GROUP BY f.flight_id
-        HAVING COUNT(bp.boarding_no) = 0
+        LEFT JOIN boarding_passes AS bp ON f.flight_id = bp.flight_id
+        WHERE bp.boarding_no IS NULL
 ),
 
     seats_cumulative AS (
@@ -52,9 +50,7 @@ WITH empty_flights AS (
                 f.actual_departure::date) AS days_count_by_airport
         FROM flights AS f
         JOIN empty_flights AS ef ON ef.flight_id = f.flight_id
-        JOIN aircrafts AS a ON a.aircraft_code = f.aircraft_code
-        JOIN seats AS s ON s.aircraft_code = a.aircraft_code
-        WHERE f.actual_departure IS NOT NULL
+        JOIN seats AS s ON s.aircraft_code = f.aircraft_code
         GROUP BY f.departure_airport, f.actual_departure
 )
 
@@ -67,3 +63,45 @@ ORDER BY departure_airport, actual_departure;
 --Найдите процентное соотношение перелетов по маршрутам от общего количества перелетов.
 --Выведите в результат названия аэропортов и процентное отношение.
 --Решение должно быть через оконную функцию.
+
+SELECT ad.airport_name AS dept_airport_name, aa.airport_name AS arr_airport_name,
+       COUNT(f.flight_id) * 100 / SUM(COUNT(f.flight_id)) OVER () AS flights_percentage
+       FROM flights AS f
+JOIN airports AS ad ON ad.airport_code = f.departure_airport
+JOIN airports AS aa ON aa.airport_code = f.arrival_airport
+WHERE status='Arrived'
+GROUP BY ad.airport_code, aa.airport_code;
+
+
+--ЗАДАНИЕ №6
+-- Выведите количество пассажиров по каждому коду сотового оператора, если учесть,
+-- что код оператора - это три символа после +7
+
+WITH phone_codes AS (
+    SELECT
+        SUBSTRING(contact_data->>'phone' FROM POSITION('+7' IN contact_data->>'phone') + 2 FOR 3)
+        AS cell_code
+    FROM tickets
+    WHERE contact_data->>'phone' IS NOT NULL
+)
+
+SELECT cell_code, COUNT(cell_code) AS passengers_num
+FROM phone_codes
+GROUP BY cell_code;
+
+
+--ЗАДАНИЕ №7
+-- Классифицируйте финансовые обороты (сумма стоимости перелетов) по маршрутам:
+--До 50 млн - low
+--От 50 млн включительно до 150 млн - middle
+--От 150 млн включительно - high
+--Выведите в результат количество маршрутов в каждом полученном классе
+
+SELECT flight_id, SUM(amount),
+    CASE
+        WHEN SUM(amount) < 50000000 THEN 'low'
+        WHEN SUM(amount) BETWEEN 50000000 AND 150000000 THEN 'middle'
+        ELSE 'high'
+    END AS total_amount
+FROM ticket_flights
+GROUP BY flight_id;

@@ -27,7 +27,7 @@
 255359||255625|C|G
 255359||-9223372036854775808|T|G
 255359||24576|T|G</Grants>
-      <IntrospectionStateNumber>471716</IntrospectionStateNumber>
+      <IntrospectionStateNumber>478996</IntrospectionStateNumber>
       <ServerVersion>10.9</ServerVersion>
       <StartupTime>1743356108</StartupTime>
       <TimeZones>true ACDT
@@ -1467,8 +1467,12 @@ true posixrules
 12762||16890|U|G
 119632||10|C|G
 119632||10|U|G
-119632||16890|U|G</Grants>
-      <IntrospectionStateNumber>471716</IntrospectionStateNumber>
+119632||16890|U|G
+293092||24576|C|G
+293092||16890|U|G
+293092||24576|U|G
+293092||255625|U|G</Grants>
+      <IntrospectionStateNumber>478996</IntrospectionStateNumber>
       <ObjectId>119631</ObjectId>
       <OwnerName>nkh</OwnerName>
     </database>
@@ -4976,8 +4980,8 @@ true posixrules
 119683||10|t|G
 119683||10|D|G
 119683||10|w|G</Grants>
-      <IntrospectionStateNumber>471716</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2025-04-12.21:35:55</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>478996</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2025-04-18.23:36:43</LastIntrospectionLocalTimestamp>
       <ObjectId>119632</ObjectId>
       <StateNumber>371499</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4993,14 +4997,20 @@ true posixrules
       <StateNumber>197563</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
-    <materialized-view id="269" parent="266" name="routes">
+    <schema id="269" parent="5" name="stroy">
+      <Comment>standard public schema</Comment>
+      <ObjectId>293092</ObjectId>
+      <StateNumber>478921</StateNumber>
+      <OwnerName>nkh</OwnerName>
+    </schema>
+    <materialized-view id="270" parent="266" name="routes">
       <Comment>Маршруты</Comment>
       <ObjectId>119666</ObjectId>
       <SourceTextLength>1703</SourceTextLength>
       <StateNumber>197567</StateNumber>
       <OwnerName>postgres</OwnerName>
     </materialized-view>
-    <object-type id="270" parent="266" name="cube">
+    <object-type id="271" parent="266" name="cube">
       <Comment>multi-dimensional cube &apos;(FLOAT-1, FLOAT-2, ..., FLOAT-N), (FLOAT-1, FLOAT-2, ..., FLOAT-N)&apos;</Comment>
       <Definition>-</Definition>
       <ObjectId>157445</ObjectId>
@@ -5009,7 +5019,7 @@ true posixrules
       <SubKind>base-type</SubKind>
       <OwnerName>nkh</OwnerName>
     </object-type>
-    <object-type id="271" parent="266" name="earth">
+    <object-type id="272" parent="266" name="earth">
       <Definition>cube</Definition>
       <ObjectId>157533</ObjectId>
       <StateNumber>209090</StateNumber>
@@ -5018,7 +5028,7 @@ true posixrules
       <BaseTypeId>157445</BaseTypeId>
       <OwnerName>nkh</OwnerName>
     </object-type>
-    <operator id="272" parent="266" name="&amp;&amp;">
+    <operator id="273" parent="266" name="&amp;&amp;">
       <LeftType>cube|0s</LeftType>
       <ObjectId>157483</ObjectId>
       <OperatorKind>binary</OperatorKind>
@@ -5035,7 +5045,7 @@ true posixrules
       <RestrictRoutineId>139</RestrictRoutineId>
       <RestrictRoutineName>areasel</RestrictRoutineName>
     </operator>
-    <operator id="273" parent="266" name="-&gt;">
+    <operator id="274" parent="266" name="-&gt;">
       <LeftType>cube|0s</LeftType>
       <ObjectId>157488</ObjectId>
       <OperatorKind>binary</OperatorKind>
@@ -5046,7 +5056,7 @@ true posixrules
       <CallRoutineName>cube_coord</CallRoutineName>
       <OwnerName>nkh</OwnerName>
     </operator>
-    <operator id="274" parent="266" name="&lt;#&gt;">
+    <operator id="275" parent="266" name="&lt;#&gt;">
       <LeftType>cube|0s</LeftType>
       <ObjectId>157490</ObjectId>
       <OperatorKind>binary</OperatorKind>
@@ -5059,7 +5069,7 @@ true posixrules
       <CommuteOperatorName>&lt;#&gt;</CommuteOperatorName>
       <OwnerName>nkh</OwnerName>
     </operator>
-    <operator id="275" parent="266" name="&lt;">
+    <operator id="276" parent="266" name="&lt;">
       <LeftType>cube|0s</LeftType>
       <ObjectId>157481</ObjectId>
       <OperatorKind>binary</OperatorKind>
@@ -5078,7 +5088,7 @@ true posixrules
       <RestrictRoutineId>103</RestrictRoutineId>
       <RestrictRoutineName>scalarltsel</RestrictRoutineName>
     </operator>
-    <operator id="276" parent="266" name="&lt;-&gt;">
+    <operator id="277" parent="266" name="&lt;-&gt;">
       <LeftType>cube|0s</LeftType>
       <ObjectId>157491</ObjectId>
       <OperatorKind>binary</OperatorKind>
@@ -5091,7 +5101,7 @@ true posixrules
       <CommuteOperatorName>&lt;-&gt;</CommuteOperatorName>
       <OwnerName>nkh</OwnerName>
     </operator>
-    <operator id="277" parent="266" name="&lt;=">
+    <operator id="278" parent="266" name="&lt;=">
       <LeftType>cube|0s</LeftType>
       <ObjectId>157482</ObjectId>
       <OperatorKind>binary</OperatorKind>
@@ -5110,7 +5120,7 @@ true posixrules
       <RestrictRoutineId>103</RestrictRoutineId>
       <RestrictRoutineName>scalarltsel</RestrictRoutineName>
     </operator>
-    <operator id="278" parent="266" name="&lt;=&gt;">
+    <operator id="279" parent="266" name="&lt;=&gt;">
       <LeftType>cube|0s</LeftType>
       <ObjectId>157492</ObjectId>
       <OperatorKind>binary</OperatorKind>
@@ -5123,7 +5133,7 @@ true posixrules
       <CommuteOperatorName>&lt;=&gt;</CommuteOperatorName>
       <OwnerName>nkh</OwnerName>
     </operator>
-    <operator id="279" parent="266" name="&lt;&gt;">
+    <operator id="280" parent="266" name="&lt;&gt;">
       <LeftType>cube|0s</LeftType>
       <ObjectId>157484</ObjectId>
       <OperatorKind>binary</OperatorKind>
@@ -5142,7 +5152,7 @@ true posixrules
       <RestrictRoutineId>102</RestrictRoutineId>
       <RestrictRoutineName>neqsel</RestrictRoutineName>
     </operator>
-    <operator id="280" parent="266" name="&lt;@">
+    <operator id="281" parent="266" name="&lt;@">
       <LeftType>cube|0s</LeftType>
       <ObjectId>157486</ObjectId>
       <OperatorKind>binary</OperatorKind>
@@ -5159,7 +5169,7 @@ true posixrules
       <RestrictRoutineId>1302</RestrictRoutineId>
       <RestrictRoutineName>contsel</RestrictRoutineName>
     </operator>
-    <operator id="281" parent="266" name="&lt;@&gt;">
+    <operator id="282" parent="266" name="&lt;@&gt;">
       <LeftType>point|0s</LeftType>
       <ObjectId>157545</ObjectId>
       <OperatorKind>binary</OperatorKind>
@@ -5172,7 +5182,7 @@ true posixrules
       <CommuteOperatorName>&lt;@&gt;</CommuteOperatorName>
       <OwnerName>nkh</OwnerName>
     </operator>
-    <operator id="282" parent="266" name="=">
+    <operator id="283" parent="266" name="=">
       <LeftType>cube|0s</LeftType>
       <Merges>1</Merges>
       <ObjectId>157485</ObjectId>
@@ -5192,7 +5202,7 @@ true posixrules
       <RestrictRoutineId>101</RestrictRoutineId>
       <RestrictRoutineName>eqsel</RestrictRoutineName>
     </operator>
-    <operator id="283" parent="266" name="&gt;">
+    <operator id="284" parent="266" name="&gt;">
       <LeftType>cube|0s</LeftType>
       <ObjectId>157479</ObjectId>
       <OperatorKind>binary</OperatorKind>
@@ -5211,7 +5221,7 @@ true posixrules
       <RestrictRoutineId>104</RestrictRoutineId>
       <RestrictRoutineName>scalargtsel</RestrictRoutineName>
     </operator>
-    <operator id="284" parent="266" name="&gt;=">
+    <operator id="285" parent="266" name="&gt;=">
       <LeftType>cube|0s</LeftType>
       <ObjectId>157480</ObjectId>
       <OperatorKind>binary</OperatorKind>
@@ -5230,7 +5240,7 @@ true posixrules
       <RestrictRoutineId>104</RestrictRoutineId>
       <RestrictRoutineName>scalargtsel</RestrictRoutineName>
     </operator>
-    <operator id="285" parent="266" name="@">
+    <operator id="286" parent="266" name="@">
       <LeftType>cube|0s</LeftType>
       <ObjectId>157494</ObjectId>
       <OperatorKind>binary</OperatorKind>
@@ -5247,7 +5257,7 @@ true posixrules
       <RestrictRoutineId>1302</RestrictRoutineId>
       <RestrictRoutineName>contsel</RestrictRoutineName>
     </operator>
-    <operator id="286" parent="266" name="@&gt;">
+    <operator id="287" parent="266" name="@&gt;">
       <LeftType>cube|0s</LeftType>
       <ObjectId>157487</ObjectId>
       <OperatorKind>binary</OperatorKind>
@@ -5264,7 +5274,7 @@ true posixrules
       <RestrictRoutineId>1302</RestrictRoutineId>
       <RestrictRoutineName>contsel</RestrictRoutineName>
     </operator>
-    <operator id="287" parent="266" name="~">
+    <operator id="288" parent="266" name="~">
       <LeftType>cube|0s</LeftType>
       <ObjectId>157493</ObjectId>
       <OperatorKind>binary</OperatorKind>
@@ -5281,7 +5291,7 @@ true posixrules
       <RestrictRoutineId>1302</RestrictRoutineId>
       <RestrictRoutineName>contsel</RestrictRoutineName>
     </operator>
-    <operator id="288" parent="266" name="~&gt;">
+    <operator id="289" parent="266" name="~&gt;">
       <LeftType>cube|0s</LeftType>
       <ObjectId>157489</ObjectId>
       <OperatorKind>binary</OperatorKind>
@@ -5292,7 +5302,7 @@ true posixrules
       <CallRoutineName>cube_coord_llur</CallRoutineName>
       <OwnerName>nkh</OwnerName>
     </operator>
-    <operator-class id="289" parent="266" name="cube_ops">
+    <operator-class id="290" parent="266" name="cube_ops">
       <AmOps>157507|3|157485|=(cube,cube)||
 157505|1|157481|&lt;(cube,cube)||
 157509|5|157479|&gt;(cube,cube)||
@@ -5308,7 +5318,7 @@ true posixrules
       <OperatorFamilyName>cube_ops</OperatorFamilyName>
       <OwnerName>nkh</OwnerName>
     </operator-class>
-    <operator-class id="290" parent="266" name="gist_cube_ops">
+    <operator-class id="291" parent="266" name="gist_cube_ops">
       <AmOps>157522|18|157492|&lt;=&gt;(cube,cube)|1970|float_ops
 157513|3|157483|&amp;amp;&amp;amp;(cube,cube)||
 157514|6|157485|=(cube,cube)||
@@ -5336,7 +5346,7 @@ true posixrules
       <OperatorFamilyName>gist_cube_ops</OperatorFamilyName>
       <OwnerName>nkh</OwnerName>
     </operator-class>
-    <operator-family id="291" parent="266" name="cube_ops">
+    <operator-family id="292" parent="266" name="cube_ops">
       <AmOps>157505|1|157481|&lt;(cube,cube)||
 157508|4|157480|&gt;=(cube,cube)||
 157507|3|157485|=(cube,cube)||
@@ -5348,7 +5358,7 @@ true posixrules
       <AccessMethodId>403</AccessMethodId>
       <OwnerName>nkh</OwnerName>
     </operator-family>
-    <operator-family id="292" parent="266" name="gist_cube_ops">
+    <operator-family id="293" parent="266" name="gist_cube_ops">
       <AmOps>157518|14|157493|~(cube,cube)||
 157521|17|157491|&lt;-&gt;(cube,cube)|1970|float_ops
 157514|6|157485|=(cube,cube)||
@@ -5372,7 +5382,7 @@ true posixrules
       <AccessMethodId>783</AccessMethodId>
       <OwnerName>nkh</OwnerName>
     </operator-family>
-    <routine id="293" parent="266" name="cube">
+    <routine id="294" parent="266" name="cube">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157475</ObjectId>
@@ -5383,7 +5393,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="294" parent="266" name="cube">
+    <routine id="295" parent="266" name="cube">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157476</ObjectId>
@@ -5394,7 +5404,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="295" parent="266" name="cube">
+    <routine id="296" parent="266" name="cube">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157473</ObjectId>
@@ -5405,7 +5415,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="296" parent="266" name="cube">
+    <routine id="297" parent="266" name="cube">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157474</ObjectId>
@@ -5416,7 +5426,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="297" parent="266" name="cube">
+    <routine id="298" parent="266" name="cube">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157448</ObjectId>
@@ -5427,7 +5437,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="298" parent="266" name="cube">
+    <routine id="299" parent="266" name="cube">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157447</ObjectId>
@@ -5438,7 +5448,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="299" parent="266" name="cube_cmp">
+    <routine id="300" parent="266" name="cube_cmp">
       <Comment>btree comparison function</Comment>
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
@@ -5450,7 +5460,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="300" parent="266" name="cube_contained">
+    <routine id="301" parent="266" name="cube_contained">
       <Comment>contained in</Comment>
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
@@ -5462,7 +5472,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="301" parent="266" name="cube_contains">
+    <routine id="302" parent="266" name="cube_contains">
       <Comment>contains</Comment>
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
@@ -5474,7 +5484,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="302" parent="266" name="cube_coord">
+    <routine id="303" parent="266" name="cube_coord">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157471</ObjectId>
@@ -5485,7 +5495,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="303" parent="266" name="cube_coord_llur">
+    <routine id="304" parent="266" name="cube_coord_llur">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157472</ObjectId>
@@ -5496,7 +5506,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="304" parent="266" name="cube_dim">
+    <routine id="305" parent="266" name="cube_dim">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157468</ObjectId>
@@ -5507,7 +5517,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="305" parent="266" name="cube_distance">
+    <routine id="306" parent="266" name="cube_distance">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157465</ObjectId>
@@ -5518,7 +5528,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="306" parent="266" name="cube_enlarge">
+    <routine id="307" parent="266" name="cube_enlarge">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157478</ObjectId>
@@ -5529,7 +5539,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="307" parent="266" name="cube_eq">
+    <routine id="308" parent="266" name="cube_eq">
       <Comment>same as</Comment>
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
@@ -5541,7 +5551,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="308" parent="266" name="cube_ge">
+    <routine id="309" parent="266" name="cube_ge">
       <Comment>greater than or equal to</Comment>
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
@@ -5553,7 +5563,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="309" parent="266" name="cube_gt">
+    <routine id="310" parent="266" name="cube_gt">
       <Comment>greater than</Comment>
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
@@ -5565,7 +5575,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="310" parent="266" name="cube_in">
+    <routine id="311" parent="266" name="cube_in">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157446</ObjectId>
@@ -5576,7 +5586,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="311" parent="266" name="cube_inter">
+    <routine id="312" parent="266" name="cube_inter">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157462</ObjectId>
@@ -5587,7 +5597,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="312" parent="266" name="cube_is_point">
+    <routine id="313" parent="266" name="cube_is_point">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157477</ObjectId>
@@ -5598,7 +5608,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="313" parent="266" name="cube_le">
+    <routine id="314" parent="266" name="cube_le">
       <Comment>lower than or equal to</Comment>
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
@@ -5610,7 +5620,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="314" parent="266" name="cube_ll_coord">
+    <routine id="315" parent="266" name="cube_ll_coord">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157469</ObjectId>
@@ -5621,7 +5631,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="315" parent="266" name="cube_lt">
+    <routine id="316" parent="266" name="cube_lt">
       <Comment>lower than</Comment>
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
@@ -5633,7 +5643,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="316" parent="266" name="cube_ne">
+    <routine id="317" parent="266" name="cube_ne">
       <Comment>different</Comment>
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
@@ -5645,7 +5655,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="317" parent="266" name="cube_out">
+    <routine id="318" parent="266" name="cube_out">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157449</ObjectId>
@@ -5656,7 +5666,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="318" parent="266" name="cube_overlap">
+    <routine id="319" parent="266" name="cube_overlap">
       <Comment>overlaps</Comment>
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
@@ -5668,7 +5678,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="319" parent="266" name="cube_size">
+    <routine id="320" parent="266" name="cube_size">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157463</ObjectId>
@@ -5679,7 +5689,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="320" parent="266" name="cube_subset">
+    <routine id="321" parent="266" name="cube_subset">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157464</ObjectId>
@@ -5690,7 +5700,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="321" parent="266" name="cube_union">
+    <routine id="322" parent="266" name="cube_union">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157461</ObjectId>
@@ -5701,7 +5711,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="322" parent="266" name="cube_ur_coord">
+    <routine id="323" parent="266" name="cube_ur_coord">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157470</ObjectId>
@@ -5712,7 +5722,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="323" parent="266" name="distance_chebyshev">
+    <routine id="324" parent="266" name="distance_chebyshev">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157466</ObjectId>
@@ -5723,7 +5733,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="324" parent="266" name="distance_taxicab">
+    <routine id="325" parent="266" name="distance_taxicab">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157467</ObjectId>
@@ -5734,7 +5744,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="325" parent="266" name="earth">
+    <routine id="326" parent="266" name="earth">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <ObjectId>157532</ObjectId>
       <ResultsDefinition>double precision</ResultsDefinition>
@@ -5745,7 +5755,7 @@ true posixrules
       <LanguageName>sql</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="326" parent="266" name="earth_box">
+    <routine id="327" parent="266" name="earth_box">
       <ArgumentsDefinition>earth, double precision</ArgumentsDefinition>
       <ConcurrencyKind>safe</ConcurrencyKind>
       <ObjectId>157543</ObjectId>
@@ -5758,7 +5768,7 @@ true posixrules
       <LanguageName>sql</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="327" parent="266" name="earth_distance">
+    <routine id="328" parent="266" name="earth_distance">
       <ArgumentsDefinition>earth, earth</ArgumentsDefinition>
       <ConcurrencyKind>safe</ConcurrencyKind>
       <ObjectId>157542</ObjectId>
@@ -5771,7 +5781,7 @@ true posixrules
       <LanguageName>sql</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="328" parent="266" name="g_cube_compress">
+    <routine id="329" parent="266" name="g_cube_compress">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157496</ObjectId>
@@ -5782,7 +5792,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="329" parent="266" name="g_cube_consistent">
+    <routine id="330" parent="266" name="g_cube_consistent">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157495</ObjectId>
@@ -5793,7 +5803,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="330" parent="266" name="g_cube_decompress">
+    <routine id="331" parent="266" name="g_cube_decompress">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157497</ObjectId>
@@ -5804,7 +5814,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="331" parent="266" name="g_cube_distance">
+    <routine id="332" parent="266" name="g_cube_distance">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157502</ObjectId>
@@ -5815,7 +5825,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="332" parent="266" name="g_cube_penalty">
+    <routine id="333" parent="266" name="g_cube_penalty">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157498</ObjectId>
@@ -5826,7 +5836,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="333" parent="266" name="g_cube_picksplit">
+    <routine id="334" parent="266" name="g_cube_picksplit">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157499</ObjectId>
@@ -5837,7 +5847,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="334" parent="266" name="g_cube_same">
+    <routine id="335" parent="266" name="g_cube_same">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157501</ObjectId>
@@ -5848,7 +5858,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="335" parent="266" name="g_cube_union">
+    <routine id="336" parent="266" name="g_cube_union">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157500</ObjectId>
@@ -5859,7 +5869,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="336" parent="266" name="gc_to_sec">
+    <routine id="337" parent="266" name="gc_to_sec">
       <ArgumentsDefinition>double precision</ArgumentsDefinition>
       <ConcurrencyKind>safe</ConcurrencyKind>
       <ObjectId>157538</ObjectId>
@@ -5872,7 +5882,7 @@ true posixrules
       <LanguageName>sql</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="337" parent="266" name="geo_distance">
+    <routine id="338" parent="266" name="geo_distance">
       <ConcurrencyKind>safe</ConcurrencyKind>
       <Cost>1.0</Cost>
       <ObjectId>157544</ObjectId>
@@ -5883,7 +5893,7 @@ true posixrules
       <LanguageName>c</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="338" parent="266" name="latitude">
+    <routine id="339" parent="266" name="latitude">
       <ArgumentsDefinition>earth</ArgumentsDefinition>
       <ConcurrencyKind>safe</ConcurrencyKind>
       <ObjectId>157540</ObjectId>
@@ -5896,7 +5906,7 @@ true posixrules
       <LanguageName>sql</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="339" parent="266" name="ll_to_earth">
+    <routine id="340" parent="266" name="ll_to_earth">
       <ArgumentsDefinition>double precision, double precision</ArgumentsDefinition>
       <ConcurrencyKind>safe</ConcurrencyKind>
       <ObjectId>157539</ObjectId>
@@ -5909,7 +5919,7 @@ true posixrules
       <LanguageName>sql</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="340" parent="266" name="longitude">
+    <routine id="341" parent="266" name="longitude">
       <ArgumentsDefinition>earth</ArgumentsDefinition>
       <ConcurrencyKind>safe</ConcurrencyKind>
       <ObjectId>157541</ObjectId>
@@ -5922,7 +5932,7 @@ true posixrules
       <LanguageName>sql</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <routine id="341" parent="266" name="now">
+    <routine id="342" parent="266" name="now">
       <Comment>Момент времени, относительно которого сформированы данные</Comment>
       <Cost>0.01</Cost>
       <ObjectId>119633</ObjectId>
@@ -5934,7 +5944,7 @@ true posixrules
       <LanguageName>sql</LanguageName>
       <OwnerName>postgres</OwnerName>
     </routine>
-    <routine id="342" parent="266" name="sec_to_gc">
+    <routine id="343" parent="266" name="sec_to_gc">
       <ArgumentsDefinition>double precision</ArgumentsDefinition>
       <ConcurrencyKind>safe</ConcurrencyKind>
       <ObjectId>157537</ObjectId>
@@ -5947,7 +5957,7 @@ true posixrules
       <LanguageName>sql</LanguageName>
       <OwnerName>nkh</OwnerName>
     </routine>
-    <sequence id="343" parent="266" name="flights_flight_id_seq">
+    <sequence id="344" parent="266" name="flights_flight_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>119659</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
@@ -5955,715 +5965,715 @@ true posixrules
       <StateNumber>197447</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="344" parent="266" name="aircrafts">
+    <table id="345" parent="266" name="aircrafts">
       <Comment>Самолеты</Comment>
       <ObjectId>119634</ObjectId>
       <StateNumber>197567</StateNumber>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="345" parent="266" name="airports">
+    <table id="346" parent="266" name="airports">
       <Comment>Аэропорты</Comment>
       <ObjectId>119641</ObjectId>
       <StateNumber>197567</StateNumber>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="346" parent="266" name="boarding_passes">
+    <table id="347" parent="266" name="boarding_passes">
       <Comment>Посадочные талоны</Comment>
       <ObjectId>119647</ObjectId>
       <StateNumber>197567</StateNumber>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="347" parent="266" name="bookings">
+    <table id="348" parent="266" name="bookings">
       <Comment>Бронирования</Comment>
       <ObjectId>119650</ObjectId>
       <StateNumber>197567</StateNumber>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="348" parent="266" name="flights">
+    <table id="349" parent="266" name="flights">
       <Comment>Рейсы</Comment>
       <ObjectId>119653</ObjectId>
       <StateNumber>371495</StateNumber>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="349" parent="266" name="seats">
+    <table id="350" parent="266" name="seats">
       <Comment>Места</Comment>
       <ObjectId>119674</ObjectId>
       <StateNumber>197567</StateNumber>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="350" parent="266" name="ticket_flights">
+    <table id="351" parent="266" name="ticket_flights">
       <Comment>Перелеты</Comment>
       <ObjectId>119678</ObjectId>
       <StateNumber>197567</StateNumber>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="351" parent="266" name="tickets">
+    <table id="352" parent="266" name="tickets">
       <Comment>Билеты</Comment>
       <ObjectId>119683</ObjectId>
       <StateNumber>197567</StateNumber>
       <OwnerName>postgres</OwnerName>
     </table>
-    <view id="352" parent="266" name="flights_v">
+    <view id="353" parent="266" name="flights_v">
       <Comment>Рейсы</Comment>
       <ObjectId>119661</ObjectId>
       <SourceTextLength>947</SourceTextLength>
       <StateNumber>197567</StateNumber>
       <OwnerName>postgres</OwnerName>
     </view>
-    <column id="353" parent="269" name="flight_no">
+    <column id="354" parent="270" name="flight_no">
       <Comment>Номер рейса</Comment>
       <DasType>char(6)|0s</DasType>
       <Position>1</Position>
       <StateNumber>197472</StateNumber>
     </column>
-    <column id="354" parent="269" name="departure_airport">
+    <column id="355" parent="270" name="departure_airport">
       <Comment>Код аэропорта отправления</Comment>
       <DasType>char(3)|0s</DasType>
       <Position>2</Position>
       <StateNumber>197472</StateNumber>
     </column>
-    <column id="355" parent="269" name="departure_airport_name">
+    <column id="356" parent="270" name="departure_airport_name">
       <Comment>Название аэропорта отправления</Comment>
       <DasType>text|0s</DasType>
       <Position>3</Position>
       <StateNumber>197472</StateNumber>
     </column>
-    <column id="356" parent="269" name="departure_city">
+    <column id="357" parent="270" name="departure_city">
       <Comment>Город отправления</Comment>
       <DasType>text|0s</DasType>
       <Position>4</Position>
       <StateNumber>197472</StateNumber>
     </column>
-    <column id="357" parent="269" name="arrival_airport">
+    <column id="358" parent="270" name="arrival_airport">
       <Comment>Код аэропорта прибытия</Comment>
       <DasType>char(3)|0s</DasType>
       <Position>5</Position>
       <StateNumber>197472</StateNumber>
     </column>
-    <column id="358" parent="269" name="arrival_airport_name">
+    <column id="359" parent="270" name="arrival_airport_name">
       <Comment>Название аэропорта прибытия</Comment>
       <DasType>text|0s</DasType>
       <Position>6</Position>
       <StateNumber>197472</StateNumber>
     </column>
-    <column id="359" parent="269" name="arrival_city">
+    <column id="360" parent="270" name="arrival_city">
       <Comment>Город прибытия</Comment>
       <DasType>text|0s</DasType>
       <Position>7</Position>
       <StateNumber>197472</StateNumber>
     </column>
-    <column id="360" parent="269" name="aircraft_code">
+    <column id="361" parent="270" name="aircraft_code">
       <Comment>Код самолета, IATA</Comment>
       <DasType>char(3)|0s</DasType>
       <Position>8</Position>
       <StateNumber>197472</StateNumber>
     </column>
-    <column id="361" parent="269" name="duration">
+    <column id="362" parent="270" name="duration">
       <Comment>Продолжительность полета</Comment>
       <DasType>interval|0s</DasType>
       <Position>9</Position>
       <StateNumber>197472</StateNumber>
     </column>
-    <column id="362" parent="269" name="days_of_week">
+    <column id="363" parent="270" name="days_of_week">
       <Comment>Дни недели, когда выполняются рейсы</Comment>
       <DasType>integer[]|0s</DasType>
       <Position>10</Position>
       <StateNumber>197472</StateNumber>
     </column>
-    <check id="363" parent="271" name="not_3d">
+    <check id="364" parent="272" name="not_3d">
       <ObjectId>157535</ObjectId>
       <Predicate>cube_dim(VALUE) &lt;= 3</Predicate>
       <StateNumber>209090</StateNumber>
     </check>
-    <check id="364" parent="271" name="not_point">
+    <check id="365" parent="272" name="not_point">
       <ObjectId>157534</ObjectId>
       <Predicate>cube_is_point(VALUE)</Predicate>
       <StateNumber>209090</StateNumber>
     </check>
-    <check id="365" parent="271" name="on_surface">
+    <check id="366" parent="272" name="on_surface">
       <ObjectId>157536</ObjectId>
       <Predicate>abs(((cube_distance(VALUE, &apos;(0)&apos;::cube) / earth()) - (1)::double precision)) &lt; &apos;9.99999999999999955e-07&apos;::double precision</Predicate>
       <StateNumber>209090</StateNumber>
     </check>
-    <argument id="366" parent="293">
+    <argument id="367" parent="294">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>cube|0s</DasType>
     </argument>
-    <argument id="367" parent="293">
+    <argument id="368" parent="294">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
-    </argument>
-    <argument id="368" parent="293">
-      <DasType>double precision|0s</DasType>
-      <Position>2</Position>
     </argument>
     <argument id="369" parent="294">
-      <ArgumentDirection>R</ArgumentDirection>
-      <DasType>cube|0s</DasType>
-    </argument>
-    <argument id="370" parent="294">
-      <DasType>cube|0s</DasType>
-      <Position>1</Position>
-    </argument>
-    <argument id="371" parent="294">
       <DasType>double precision|0s</DasType>
       <Position>2</Position>
     </argument>
-    <argument id="372" parent="294">
+    <argument id="370" parent="295">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DasType>cube|0s</DasType>
+    </argument>
+    <argument id="371" parent="295">
+      <DasType>cube|0s</DasType>
+      <Position>1</Position>
+    </argument>
+    <argument id="372" parent="295">
       <DasType>double precision|0s</DasType>
-      <Position>3</Position>
+      <Position>2</Position>
     </argument>
     <argument id="373" parent="295">
+      <DasType>double precision|0s</DasType>
+      <Position>3</Position>
+    </argument>
+    <argument id="374" parent="296">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>cube|0s</DasType>
-    </argument>
-    <argument id="374" parent="295">
-      <DasType>double precision|0s</DasType>
-      <Position>1</Position>
     </argument>
     <argument id="375" parent="296">
-      <ArgumentDirection>R</ArgumentDirection>
-      <DasType>cube|0s</DasType>
-    </argument>
-    <argument id="376" parent="296">
       <DasType>double precision|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="377" parent="296">
+    <argument id="376" parent="297">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DasType>cube|0s</DasType>
+    </argument>
+    <argument id="377" parent="297">
       <DasType>double precision|0s</DasType>
-      <Position>2</Position>
+      <Position>1</Position>
     </argument>
     <argument id="378" parent="297">
+      <DasType>double precision|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="379" parent="298">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>cube|0s</DasType>
-    </argument>
-    <argument id="379" parent="297">
-      <DasType>double precision[]|0s</DasType>
-      <Position>1</Position>
     </argument>
     <argument id="380" parent="298">
-      <ArgumentDirection>R</ArgumentDirection>
-      <DasType>cube|0s</DasType>
-    </argument>
-    <argument id="381" parent="298">
       <DasType>double precision[]|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="382" parent="298">
+    <argument id="381" parent="299">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DasType>cube|0s</DasType>
+    </argument>
+    <argument id="382" parent="299">
       <DasType>double precision[]|0s</DasType>
-      <Position>2</Position>
+      <Position>1</Position>
     </argument>
     <argument id="383" parent="299">
+      <DasType>double precision[]|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="384" parent="300">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>integer|0s</DasType>
     </argument>
-    <argument id="384" parent="299">
+    <argument id="385" parent="300">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
-    </argument>
-    <argument id="385" parent="299">
-      <DasType>cube|0s</DasType>
-      <Position>2</Position>
     </argument>
     <argument id="386" parent="300">
+      <DasType>cube|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="387" parent="301">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>boolean|0s</DasType>
     </argument>
-    <argument id="387" parent="300">
+    <argument id="388" parent="301">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
-    </argument>
-    <argument id="388" parent="300">
-      <DasType>cube|0s</DasType>
-      <Position>2</Position>
     </argument>
     <argument id="389" parent="301">
+      <DasType>cube|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="390" parent="302">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>boolean|0s</DasType>
     </argument>
-    <argument id="390" parent="301">
+    <argument id="391" parent="302">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
-    </argument>
-    <argument id="391" parent="301">
-      <DasType>cube|0s</DasType>
-      <Position>2</Position>
     </argument>
     <argument id="392" parent="302">
+      <DasType>cube|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="393" parent="303">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>double precision|0s</DasType>
     </argument>
-    <argument id="393" parent="302">
+    <argument id="394" parent="303">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
-    </argument>
-    <argument id="394" parent="302">
-      <DasType>integer|0s</DasType>
-      <Position>2</Position>
     </argument>
     <argument id="395" parent="303">
+      <DasType>integer|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="396" parent="304">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>double precision|0s</DasType>
     </argument>
-    <argument id="396" parent="303">
+    <argument id="397" parent="304">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
-    </argument>
-    <argument id="397" parent="303">
-      <DasType>integer|0s</DasType>
-      <Position>2</Position>
     </argument>
     <argument id="398" parent="304">
+      <DasType>integer|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="399" parent="305">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>integer|0s</DasType>
     </argument>
-    <argument id="399" parent="304">
+    <argument id="400" parent="305">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="400" parent="305">
+    <argument id="401" parent="306">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>double precision|0s</DasType>
     </argument>
-    <argument id="401" parent="305">
+    <argument id="402" parent="306">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
-    </argument>
-    <argument id="402" parent="305">
-      <DasType>cube|0s</DasType>
-      <Position>2</Position>
     </argument>
     <argument id="403" parent="306">
+      <DasType>cube|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="404" parent="307">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>cube|0s</DasType>
     </argument>
-    <argument id="404" parent="306">
+    <argument id="405" parent="307">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="405" parent="306">
+    <argument id="406" parent="307">
       <DasType>double precision|0s</DasType>
       <Position>2</Position>
     </argument>
-    <argument id="406" parent="306">
+    <argument id="407" parent="307">
       <DasType>integer|0s</DasType>
       <Position>3</Position>
     </argument>
-    <argument id="407" parent="307">
+    <argument id="408" parent="308">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>boolean|0s</DasType>
     </argument>
-    <argument id="408" parent="307">
+    <argument id="409" parent="308">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
-    </argument>
-    <argument id="409" parent="307">
-      <DasType>cube|0s</DasType>
-      <Position>2</Position>
     </argument>
     <argument id="410" parent="308">
+      <DasType>cube|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="411" parent="309">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>boolean|0s</DasType>
     </argument>
-    <argument id="411" parent="308">
+    <argument id="412" parent="309">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
-    </argument>
-    <argument id="412" parent="308">
-      <DasType>cube|0s</DasType>
-      <Position>2</Position>
     </argument>
     <argument id="413" parent="309">
-      <ArgumentDirection>R</ArgumentDirection>
-      <DasType>boolean|0s</DasType>
-    </argument>
-    <argument id="414" parent="309">
-      <DasType>cube|0s</DasType>
-      <Position>1</Position>
-    </argument>
-    <argument id="415" parent="309">
       <DasType>cube|0s</DasType>
       <Position>2</Position>
     </argument>
+    <argument id="414" parent="310">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DasType>boolean|0s</DasType>
+    </argument>
+    <argument id="415" parent="310">
+      <DasType>cube|0s</DasType>
+      <Position>1</Position>
+    </argument>
     <argument id="416" parent="310">
+      <DasType>cube|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="417" parent="311">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>cube|0s</DasType>
     </argument>
-    <argument id="417" parent="310">
+    <argument id="418" parent="311">
       <DasType>cstring|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="418" parent="311">
+    <argument id="419" parent="312">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>cube|0s</DasType>
     </argument>
-    <argument id="419" parent="311">
+    <argument id="420" parent="312">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
-    </argument>
-    <argument id="420" parent="311">
-      <DasType>cube|0s</DasType>
-      <Position>2</Position>
     </argument>
     <argument id="421" parent="312">
-      <ArgumentDirection>R</ArgumentDirection>
-      <DasType>boolean|0s</DasType>
-    </argument>
-    <argument id="422" parent="312">
-      <DasType>cube|0s</DasType>
-      <Position>1</Position>
-    </argument>
-    <argument id="423" parent="313">
-      <ArgumentDirection>R</ArgumentDirection>
-      <DasType>boolean|0s</DasType>
-    </argument>
-    <argument id="424" parent="313">
-      <DasType>cube|0s</DasType>
-      <Position>1</Position>
-    </argument>
-    <argument id="425" parent="313">
       <DasType>cube|0s</DasType>
       <Position>2</Position>
     </argument>
+    <argument id="422" parent="313">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DasType>boolean|0s</DasType>
+    </argument>
+    <argument id="423" parent="313">
+      <DasType>cube|0s</DasType>
+      <Position>1</Position>
+    </argument>
+    <argument id="424" parent="314">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DasType>boolean|0s</DasType>
+    </argument>
+    <argument id="425" parent="314">
+      <DasType>cube|0s</DasType>
+      <Position>1</Position>
+    </argument>
     <argument id="426" parent="314">
+      <DasType>cube|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="427" parent="315">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>double precision|0s</DasType>
     </argument>
-    <argument id="427" parent="314">
+    <argument id="428" parent="315">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="428" parent="314">
+    <argument id="429" parent="315">
       <DasType>integer|0s</DasType>
       <Position>2</Position>
     </argument>
-    <argument id="429" parent="315">
+    <argument id="430" parent="316">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>boolean|0s</DasType>
     </argument>
-    <argument id="430" parent="315">
+    <argument id="431" parent="316">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
-    </argument>
-    <argument id="431" parent="315">
-      <DasType>cube|0s</DasType>
-      <Position>2</Position>
     </argument>
     <argument id="432" parent="316">
-      <ArgumentDirection>R</ArgumentDirection>
-      <DasType>boolean|0s</DasType>
-    </argument>
-    <argument id="433" parent="316">
-      <DasType>cube|0s</DasType>
-      <Position>1</Position>
-    </argument>
-    <argument id="434" parent="316">
       <DasType>cube|0s</DasType>
       <Position>2</Position>
     </argument>
+    <argument id="433" parent="317">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DasType>boolean|0s</DasType>
+    </argument>
+    <argument id="434" parent="317">
+      <DasType>cube|0s</DasType>
+      <Position>1</Position>
+    </argument>
     <argument id="435" parent="317">
+      <DasType>cube|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="436" parent="318">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>cstring|0s</DasType>
     </argument>
-    <argument id="436" parent="317">
+    <argument id="437" parent="318">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="437" parent="318">
+    <argument id="438" parent="319">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>boolean|0s</DasType>
     </argument>
-    <argument id="438" parent="318">
+    <argument id="439" parent="319">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="439" parent="318">
+    <argument id="440" parent="319">
       <DasType>cube|0s</DasType>
       <Position>2</Position>
     </argument>
-    <argument id="440" parent="319">
+    <argument id="441" parent="320">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>double precision|0s</DasType>
     </argument>
-    <argument id="441" parent="319">
+    <argument id="442" parent="320">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="442" parent="320">
+    <argument id="443" parent="321">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>cube|0s</DasType>
     </argument>
-    <argument id="443" parent="320">
+    <argument id="444" parent="321">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="444" parent="320">
+    <argument id="445" parent="321">
       <DasType>integer[]|0s</DasType>
       <Position>2</Position>
     </argument>
-    <argument id="445" parent="321">
+    <argument id="446" parent="322">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>cube|0s</DasType>
     </argument>
-    <argument id="446" parent="321">
+    <argument id="447" parent="322">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="447" parent="321">
+    <argument id="448" parent="322">
       <DasType>cube|0s</DasType>
       <Position>2</Position>
     </argument>
-    <argument id="448" parent="322">
+    <argument id="449" parent="323">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>double precision|0s</DasType>
     </argument>
-    <argument id="449" parent="322">
+    <argument id="450" parent="323">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="450" parent="322">
+    <argument id="451" parent="323">
       <DasType>integer|0s</DasType>
       <Position>2</Position>
     </argument>
-    <argument id="451" parent="323">
+    <argument id="452" parent="324">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>double precision|0s</DasType>
     </argument>
-    <argument id="452" parent="323">
+    <argument id="453" parent="324">
       <DasType>cube|0s</DasType>
       <Position>1</Position>
-    </argument>
-    <argument id="453" parent="323">
-      <DasType>cube|0s</DasType>
-      <Position>2</Position>
     </argument>
     <argument id="454" parent="324">
-      <ArgumentDirection>R</ArgumentDirection>
-      <DasType>double precision|0s</DasType>
-    </argument>
-    <argument id="455" parent="324">
-      <DasType>cube|0s</DasType>
-      <Position>1</Position>
-    </argument>
-    <argument id="456" parent="324">
       <DasType>cube|0s</DasType>
       <Position>2</Position>
     </argument>
-    <argument id="457" parent="325">
+    <argument id="455" parent="325">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>double precision|0s</DasType>
+    </argument>
+    <argument id="456" parent="325">
+      <DasType>cube|0s</DasType>
+      <Position>1</Position>
+    </argument>
+    <argument id="457" parent="325">
+      <DasType>cube|0s</DasType>
+      <Position>2</Position>
     </argument>
     <argument id="458" parent="326">
       <ArgumentDirection>R</ArgumentDirection>
+      <DasType>double precision|0s</DasType>
+    </argument>
+    <argument id="459" parent="327">
+      <ArgumentDirection>R</ArgumentDirection>
       <DasType>cube|0s</DasType>
     </argument>
-    <argument id="459" parent="326">
+    <argument id="460" parent="327">
       <DasType>earth|0s</DasType>
       <Position>1</Position>
-    </argument>
-    <argument id="460" parent="326">
-      <DasType>double precision|0s</DasType>
-      <Position>2</Position>
     </argument>
     <argument id="461" parent="327">
+      <DasType>double precision|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="462" parent="328">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>double precision|0s</DasType>
     </argument>
-    <argument id="462" parent="327">
+    <argument id="463" parent="328">
       <DasType>earth|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="463" parent="327">
+    <argument id="464" parent="328">
       <DasType>earth|0s</DasType>
       <Position>2</Position>
     </argument>
-    <argument id="464" parent="328">
+    <argument id="465" parent="329">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>internal|0s</DasType>
     </argument>
-    <argument id="465" parent="328">
+    <argument id="466" parent="329">
       <DasType>internal|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="466" parent="329">
+    <argument id="467" parent="330">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>boolean|0s</DasType>
     </argument>
-    <argument id="467" parent="329">
+    <argument id="468" parent="330">
       <DasType>internal|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="468" parent="329">
+    <argument id="469" parent="330">
       <DasType>cube|0s</DasType>
       <Position>2</Position>
     </argument>
-    <argument id="469" parent="329">
+    <argument id="470" parent="330">
       <DasType>smallint|0s</DasType>
       <Position>3</Position>
     </argument>
-    <argument id="470" parent="329">
+    <argument id="471" parent="330">
       <DasType>oid|0s</DasType>
       <Position>4</Position>
-    </argument>
-    <argument id="471" parent="329">
-      <DasType>internal|0s</DasType>
-      <Position>5</Position>
     </argument>
     <argument id="472" parent="330">
-      <ArgumentDirection>R</ArgumentDirection>
-      <DasType>internal|0s</DasType>
-    </argument>
-    <argument id="473" parent="330">
-      <DasType>internal|0s</DasType>
-      <Position>1</Position>
-    </argument>
-    <argument id="474" parent="331">
-      <ArgumentDirection>R</ArgumentDirection>
-      <DasType>double precision|0s</DasType>
-    </argument>
-    <argument id="475" parent="331">
-      <DasType>internal|0s</DasType>
-      <Position>1</Position>
-    </argument>
-    <argument id="476" parent="331">
-      <DasType>cube|0s</DasType>
-      <Position>2</Position>
-    </argument>
-    <argument id="477" parent="331">
-      <DasType>smallint|0s</DasType>
-      <Position>3</Position>
-    </argument>
-    <argument id="478" parent="331">
-      <DasType>oid|0s</DasType>
-      <Position>4</Position>
-    </argument>
-    <argument id="479" parent="331">
       <DasType>internal|0s</DasType>
       <Position>5</Position>
     </argument>
-    <argument id="480" parent="332">
+    <argument id="473" parent="331">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>internal|0s</DasType>
     </argument>
-    <argument id="481" parent="332">
+    <argument id="474" parent="331">
       <DasType>internal|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="482" parent="332">
+    <argument id="475" parent="332">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DasType>double precision|0s</DasType>
+    </argument>
+    <argument id="476" parent="332">
       <DasType>internal|0s</DasType>
+      <Position>1</Position>
+    </argument>
+    <argument id="477" parent="332">
+      <DasType>cube|0s</DasType>
       <Position>2</Position>
     </argument>
-    <argument id="483" parent="332">
-      <DasType>internal|0s</DasType>
+    <argument id="478" parent="332">
+      <DasType>smallint|0s</DasType>
       <Position>3</Position>
+    </argument>
+    <argument id="479" parent="332">
+      <DasType>oid|0s</DasType>
+      <Position>4</Position>
+    </argument>
+    <argument id="480" parent="332">
+      <DasType>internal|0s</DasType>
+      <Position>5</Position>
+    </argument>
+    <argument id="481" parent="333">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DasType>internal|0s</DasType>
+    </argument>
+    <argument id="482" parent="333">
+      <DasType>internal|0s</DasType>
+      <Position>1</Position>
+    </argument>
+    <argument id="483" parent="333">
+      <DasType>internal|0s</DasType>
+      <Position>2</Position>
     </argument>
     <argument id="484" parent="333">
-      <ArgumentDirection>R</ArgumentDirection>
-      <DasType>internal|0s</DasType>
-    </argument>
-    <argument id="485" parent="333">
-      <DasType>internal|0s</DasType>
-      <Position>1</Position>
-    </argument>
-    <argument id="486" parent="333">
-      <DasType>internal|0s</DasType>
-      <Position>2</Position>
-    </argument>
-    <argument id="487" parent="334">
-      <ArgumentDirection>R</ArgumentDirection>
-      <DasType>internal|0s</DasType>
-    </argument>
-    <argument id="488" parent="334">
-      <DasType>cube|0s</DasType>
-      <Position>1</Position>
-    </argument>
-    <argument id="489" parent="334">
-      <DasType>cube|0s</DasType>
-      <Position>2</Position>
-    </argument>
-    <argument id="490" parent="334">
       <DasType>internal|0s</DasType>
       <Position>3</Position>
     </argument>
+    <argument id="485" parent="334">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DasType>internal|0s</DasType>
+    </argument>
+    <argument id="486" parent="334">
+      <DasType>internal|0s</DasType>
+      <Position>1</Position>
+    </argument>
+    <argument id="487" parent="334">
+      <DasType>internal|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="488" parent="335">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DasType>internal|0s</DasType>
+    </argument>
+    <argument id="489" parent="335">
+      <DasType>cube|0s</DasType>
+      <Position>1</Position>
+    </argument>
+    <argument id="490" parent="335">
+      <DasType>cube|0s</DasType>
+      <Position>2</Position>
+    </argument>
     <argument id="491" parent="335">
+      <DasType>internal|0s</DasType>
+      <Position>3</Position>
+    </argument>
+    <argument id="492" parent="336">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>cube|0s</DasType>
     </argument>
-    <argument id="492" parent="335">
+    <argument id="493" parent="336">
       <DasType>internal|0s</DasType>
       <Position>1</Position>
-    </argument>
-    <argument id="493" parent="335">
-      <DasType>internal|0s</DasType>
-      <Position>2</Position>
     </argument>
     <argument id="494" parent="336">
+      <DasType>internal|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="495" parent="337">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>double precision|0s</DasType>
-    </argument>
-    <argument id="495" parent="336">
-      <DasType>double precision|0s</DasType>
-      <Position>1</Position>
     </argument>
     <argument id="496" parent="337">
+      <DasType>double precision|0s</DasType>
+      <Position>1</Position>
+    </argument>
+    <argument id="497" parent="338">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>double precision|0s</DasType>
     </argument>
-    <argument id="497" parent="337">
+    <argument id="498" parent="338">
       <DasType>point|0s</DasType>
       <Position>1</Position>
-    </argument>
-    <argument id="498" parent="337">
-      <DasType>point|0s</DasType>
-      <Position>2</Position>
     </argument>
     <argument id="499" parent="338">
+      <DasType>point|0s</DasType>
+      <Position>2</Position>
+    </argument>
+    <argument id="500" parent="339">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>double precision|0s</DasType>
-    </argument>
-    <argument id="500" parent="338">
-      <DasType>earth|0s</DasType>
-      <Position>1</Position>
     </argument>
     <argument id="501" parent="339">
+      <DasType>earth|0s</DasType>
+      <Position>1</Position>
+    </argument>
+    <argument id="502" parent="340">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>earth|0s</DasType>
     </argument>
-    <argument id="502" parent="339">
+    <argument id="503" parent="340">
       <DasType>double precision|0s</DasType>
       <Position>1</Position>
     </argument>
-    <argument id="503" parent="339">
+    <argument id="504" parent="340">
       <DasType>double precision|0s</DasType>
       <Position>2</Position>
     </argument>
-    <argument id="504" parent="340">
+    <argument id="505" parent="341">
       <ArgumentDirection>R</ArgumentDirection>
       <DasType>double precision|0s</DasType>
     </argument>
-    <argument id="505" parent="340">
+    <argument id="506" parent="341">
       <DasType>earth|0s</DasType>
       <Position>1</Position>
-    </argument>
-    <argument id="506" parent="341">
-      <ArgumentDirection>R</ArgumentDirection>
-      <DasType>timestamp with time zone|0s</DasType>
     </argument>
     <argument id="507" parent="342">
       <ArgumentDirection>R</ArgumentDirection>
+      <DasType>timestamp with time zone|0s</DasType>
+    </argument>
+    <argument id="508" parent="343">
+      <ArgumentDirection>R</ArgumentDirection>
       <DasType>double precision|0s</DasType>
     </argument>
-    <argument id="508" parent="342">
+    <argument id="509" parent="343">
       <DasType>double precision|0s</DasType>
       <Position>1</Position>
     </argument>
-    <check id="509" parent="344" name="aircrafts_range_check">
+    <check id="510" parent="345" name="aircrafts_range_check">
       <ColNames>range</ColNames>
       <ObjectId>119637</ObjectId>
       <Predicate>range &gt; 0</Predicate>
       <StateNumber>197405</StateNumber>
     </check>
-    <column id="510" parent="344" name="aircraft_code">
+    <column id="511" parent="345" name="aircraft_code">
       <Comment>Код самолета, IATA</Comment>
       <DasType>char(3)|0s</DasType>
       <NotNull>1</NotNull>
@@ -6671,7 +6681,7 @@ true posixrules
       <StateNumber>197405</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="511" parent="344" name="model">
+    <column id="512" parent="345" name="model">
       <Comment>Модель самолета</Comment>
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
@@ -6679,7 +6689,7 @@ true posixrules
       <StateNumber>197405</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="512" parent="344" name="range">
+    <column id="513" parent="345" name="range">
       <Comment>Максимальная дальность полета, км</Comment>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
@@ -6687,7 +6697,7 @@ true posixrules
       <StateNumber>197405</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="513" parent="344" name="aircrafts_pkey">
+    <index id="514" parent="345" name="aircrafts_pkey">
       <ColNames>aircraft_code</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119692</ObjectId>
@@ -6699,14 +6709,14 @@ true posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="514" parent="344" name="aircrafts_pkey">
+    <key id="515" parent="345" name="aircrafts_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119693</ObjectId>
       <Primary>1</Primary>
       <StateNumber>197526</StateNumber>
       <UnderlyingIndexId>119692</UnderlyingIndexId>
     </key>
-    <column id="515" parent="345" name="airport_code">
+    <column id="516" parent="346" name="airport_code">
       <Comment>Код аэропорта</Comment>
       <DasType>char(3)|0s</DasType>
       <NotNull>1</NotNull>
@@ -6714,7 +6724,7 @@ true posixrules
       <StateNumber>197411</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="516" parent="345" name="airport_name">
+    <column id="517" parent="346" name="airport_name">
       <Comment>Название аэропорта</Comment>
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
@@ -6722,7 +6732,7 @@ true posixrules
       <StateNumber>197411</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="517" parent="345" name="city">
+    <column id="518" parent="346" name="city">
       <Comment>Город</Comment>
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
@@ -6730,7 +6740,7 @@ true posixrules
       <StateNumber>197411</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="518" parent="345" name="longitude">
+    <column id="519" parent="346" name="longitude">
       <Comment>Координаты аэропорта: долгота</Comment>
       <DasType>double precision|0s</DasType>
       <NotNull>1</NotNull>
@@ -6738,7 +6748,7 @@ true posixrules
       <StateNumber>197411</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="519" parent="345" name="latitude">
+    <column id="520" parent="346" name="latitude">
       <Comment>Координаты аэропорта: широта</Comment>
       <DasType>double precision|0s</DasType>
       <NotNull>1</NotNull>
@@ -6746,7 +6756,7 @@ true posixrules
       <StateNumber>197411</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="520" parent="345" name="timezone">
+    <column id="521" parent="346" name="timezone">
       <Comment>Временная зона аэропорта</Comment>
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
@@ -6754,7 +6764,7 @@ true posixrules
       <StateNumber>197411</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="521" parent="345" name="airports_pkey">
+    <index id="522" parent="346" name="airports_pkey">
       <ColNames>airport_code</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119694</ObjectId>
@@ -6766,14 +6776,14 @@ true posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="522" parent="345" name="airports_pkey">
+    <key id="523" parent="346" name="airports_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119695</ObjectId>
       <Primary>1</Primary>
       <StateNumber>197527</StateNumber>
       <UnderlyingIndexId>119694</UnderlyingIndexId>
     </key>
-    <column id="523" parent="346" name="ticket_no">
+    <column id="524" parent="347" name="ticket_no">
       <Comment>Номер билета</Comment>
       <DasType>char(13)|0s</DasType>
       <NotNull>1</NotNull>
@@ -6781,7 +6791,7 @@ true posixrules
       <StateNumber>197420</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="524" parent="346" name="flight_id">
+    <column id="525" parent="347" name="flight_id">
       <Comment>Идентификатор рейса</Comment>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
@@ -6789,7 +6799,7 @@ true posixrules
       <StateNumber>197420</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="525" parent="346" name="boarding_no">
+    <column id="526" parent="347" name="boarding_no">
       <Comment>Номер посадочного талона</Comment>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
@@ -6797,7 +6807,7 @@ true posixrules
       <StateNumber>197420</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="526" parent="346" name="seat_no">
+    <column id="527" parent="347" name="seat_no">
       <Comment>Номер места</Comment>
       <DasType>varchar(4)|0s</DasType>
       <NotNull>1</NotNull>
@@ -6805,7 +6815,7 @@ true posixrules
       <StateNumber>197420</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="527" parent="346" name="boarding_passes_ticket_no_fkey">
+    <foreign-key id="528" parent="347" name="boarding_passes_ticket_no_fkey">
       <ColNames>ticket_no
 flight_id</ColNames>
       <ObjectId>119714</ObjectId>
@@ -6813,7 +6823,7 @@ flight_id</ColNames>
       <RefKeyColPositions>1,2</RefKeyColPositions>
       <RefTableId>119678</RefTableId>
     </foreign-key>
-    <index id="528" parent="346" name="boarding_passes_pkey">
+    <index id="529" parent="347" name="boarding_passes_pkey">
       <ColNames>ticket_no
 flight_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -6826,7 +6836,7 @@ flight_id</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="529" parent="346" name="boarding_passes_flight_id_boarding_no_key">
+    <index id="530" parent="347" name="boarding_passes_flight_id_boarding_no_key">
       <ColNames>flight_id
 boarding_no</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -6835,7 +6845,7 @@ boarding_no</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="530" parent="346" name="boarding_passes_flight_id_seat_no_key">
+    <index id="531" parent="347" name="boarding_passes_flight_id_seat_no_key">
       <ColNames>flight_id
 seat_no</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -6850,26 +6860,26 @@ pg_catalog</CollationParentNames>
       <CollationNames>
 default</CollationNames>
     </index>
-    <key id="531" parent="346" name="boarding_passes_pkey">
+    <key id="532" parent="347" name="boarding_passes_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119701</ObjectId>
       <Primary>1</Primary>
       <StateNumber>197530</StateNumber>
       <UnderlyingIndexId>119700</UnderlyingIndexId>
     </key>
-    <key id="532" parent="346" name="boarding_passes_flight_id_boarding_no_key">
+    <key id="533" parent="347" name="boarding_passes_flight_id_boarding_no_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119697</ObjectId>
       <StateNumber>197528</StateNumber>
       <UnderlyingIndexId>119696</UnderlyingIndexId>
     </key>
-    <key id="533" parent="346" name="boarding_passes_flight_id_seat_no_key">
+    <key id="534" parent="347" name="boarding_passes_flight_id_seat_no_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119699</ObjectId>
       <StateNumber>197529</StateNumber>
       <UnderlyingIndexId>119698</UnderlyingIndexId>
     </key>
-    <column id="534" parent="347" name="book_ref">
+    <column id="535" parent="348" name="book_ref">
       <Comment>Номер бронирования</Comment>
       <DasType>char(6)|0s</DasType>
       <NotNull>1</NotNull>
@@ -6877,7 +6887,7 @@ default</CollationNames>
       <StateNumber>197427</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="535" parent="347" name="book_date">
+    <column id="536" parent="348" name="book_date">
       <Comment>Дата бронирования</Comment>
       <DasType>timestamp with time zone|0s</DasType>
       <NotNull>1</NotNull>
@@ -6885,7 +6895,7 @@ default</CollationNames>
       <StateNumber>197427</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="536" parent="347" name="total_amount">
+    <column id="537" parent="348" name="total_amount">
       <Comment>Полная сумма бронирования</Comment>
       <DasType>numeric(10,2 digit)|0s</DasType>
       <NotNull>1</NotNull>
@@ -6893,7 +6903,7 @@ default</CollationNames>
       <StateNumber>197427</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <index id="537" parent="347" name="bookings_pkey">
+    <index id="538" parent="348" name="bookings_pkey">
       <ColNames>book_ref</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119702</ObjectId>
@@ -6905,34 +6915,34 @@ default</CollationNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="538" parent="347" name="bookings_pkey">
+    <key id="539" parent="348" name="bookings_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119703</ObjectId>
       <Primary>1</Primary>
       <StateNumber>197531</StateNumber>
       <UnderlyingIndexId>119702</UnderlyingIndexId>
     </key>
-    <check id="539" parent="348" name="flights_check1">
+    <check id="540" parent="349" name="flights_check1">
       <ColNames>actual_arrival
 actual_departure</ColNames>
       <ObjectId>119657</ObjectId>
       <Predicate>(actual_arrival IS NULL) OR ((actual_departure IS NOT NULL) AND (actual_arrival IS NOT NULL) AND (actual_arrival &gt; actual_departure))</Predicate>
       <StateNumber>197433</StateNumber>
     </check>
-    <check id="540" parent="348" name="flights_status_check">
+    <check id="541" parent="349" name="flights_status_check">
       <ColNames>status</ColNames>
       <ObjectId>119658</ObjectId>
       <Predicate>(status)::text = ANY (ARRAY[(&apos;On Time&apos;::character varying)::text, (&apos;Delayed&apos;::character varying)::text, (&apos;Departed&apos;::character varying)::text, (&apos;Arrived&apos;::character varying)::text, (&apos;Scheduled&apos;::character varying)::text, (&apos;Cancelled&apos;::character varying)::text])</Predicate>
       <StateNumber>197433</StateNumber>
     </check>
-    <check id="541" parent="348" name="flights_check">
+    <check id="542" parent="349" name="flights_check">
       <ColNames>scheduled_arrival
 scheduled_departure</ColNames>
       <ObjectId>119656</ObjectId>
       <Predicate>scheduled_arrival &gt; scheduled_departure</Predicate>
       <StateNumber>197433</StateNumber>
     </check>
-    <column id="542" parent="348" name="flight_id">
+    <column id="543" parent="349" name="flight_id">
       <Comment>Идентификатор рейса</Comment>
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;bookings.flights_flight_id_seq&apos;::regclass)</DefaultExpression>
@@ -6942,7 +6952,7 @@ scheduled_departure</ColNames>
       <SequenceId>119659</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="543" parent="348" name="flight_no">
+    <column id="544" parent="349" name="flight_no">
       <Comment>Номер рейса</Comment>
       <DasType>char(6)|0s</DasType>
       <NotNull>1</NotNull>
@@ -6950,7 +6960,7 @@ scheduled_departure</ColNames>
       <StateNumber>197433</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="544" parent="348" name="scheduled_departure">
+    <column id="545" parent="349" name="scheduled_departure">
       <Comment>Время вылета по расписанию</Comment>
       <DasType>timestamp with time zone|0s</DasType>
       <NotNull>1</NotNull>
@@ -6958,7 +6968,7 @@ scheduled_departure</ColNames>
       <StateNumber>197433</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="545" parent="348" name="scheduled_arrival">
+    <column id="546" parent="349" name="scheduled_arrival">
       <Comment>Время прилёта по расписанию</Comment>
       <DasType>timestamp with time zone|0s</DasType>
       <NotNull>1</NotNull>
@@ -6966,7 +6976,7 @@ scheduled_departure</ColNames>
       <StateNumber>197433</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="546" parent="348" name="departure_airport">
+    <column id="547" parent="349" name="departure_airport">
       <Comment>Аэропорт отправления</Comment>
       <DasType>char(3)|0s</DasType>
       <NotNull>1</NotNull>
@@ -6974,7 +6984,7 @@ scheduled_departure</ColNames>
       <StateNumber>197433</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="547" parent="348" name="arrival_airport">
+    <column id="548" parent="349" name="arrival_airport">
       <Comment>Аэропорт прибытия</Comment>
       <DasType>char(3)|0s</DasType>
       <NotNull>1</NotNull>
@@ -6982,7 +6992,7 @@ scheduled_departure</ColNames>
       <StateNumber>197433</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="548" parent="348" name="status">
+    <column id="549" parent="349" name="status">
       <Comment>Статус рейса</Comment>
       <DasType>varchar(20)|0s</DasType>
       <NotNull>1</NotNull>
@@ -6990,7 +7000,7 @@ scheduled_departure</ColNames>
       <StateNumber>197433</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="549" parent="348" name="aircraft_code">
+    <column id="550" parent="349" name="aircraft_code">
       <Comment>Код самолета, IATA</Comment>
       <DasType>char(3)|0s</DasType>
       <NotNull>1</NotNull>
@@ -6998,21 +7008,21 @@ scheduled_departure</ColNames>
       <StateNumber>197433</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="550" parent="348" name="actual_departure">
+    <column id="551" parent="349" name="actual_departure">
       <Comment>Фактическое время вылета</Comment>
       <DasType>timestamp with time zone|0s</DasType>
       <Position>9</Position>
       <StateNumber>197433</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="551" parent="348" name="actual_arrival">
+    <column id="552" parent="349" name="actual_arrival">
       <Comment>Фактическое время прилёта</Comment>
       <DasType>timestamp with time zone|0s</DasType>
       <Position>10</Position>
       <StateNumber>197433</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <foreign-key id="552" parent="348" name="flights_departure_airport_fkey">
+    <foreign-key id="553" parent="349" name="flights_departure_airport_fkey">
       <ColNames>departure_airport</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119729</ObjectId>
@@ -7020,7 +7030,7 @@ scheduled_departure</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>119641</RefTableId>
     </foreign-key>
-    <foreign-key id="553" parent="348" name="flights_arrival_airport_fkey">
+    <foreign-key id="554" parent="349" name="flights_arrival_airport_fkey">
       <ColNames>arrival_airport</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119724</ObjectId>
@@ -7028,7 +7038,7 @@ scheduled_departure</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>119641</RefTableId>
     </foreign-key>
-    <foreign-key id="554" parent="348" name="flights_aircraft_code_fkey">
+    <foreign-key id="555" parent="349" name="flights_aircraft_code_fkey">
       <ColNames>aircraft_code</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119719</ObjectId>
@@ -7036,7 +7046,7 @@ scheduled_departure</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>119634</RefTableId>
     </foreign-key>
-    <index id="555" parent="348" name="flights_pkey">
+    <index id="556" parent="349" name="flights_pkey">
       <ColNames>flight_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119706</ObjectId>
@@ -7045,7 +7055,7 @@ scheduled_departure</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="556" parent="348" name="flights_flight_no_scheduled_departure_key">
+    <index id="557" parent="349" name="flights_flight_no_scheduled_departure_key">
       <ColNames>flight_no
 scheduled_departure</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -7057,26 +7067,26 @@ scheduled_departure</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="557" parent="348" name="flights_pkey">
+    <key id="558" parent="349" name="flights_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119707</ObjectId>
       <Primary>1</Primary>
       <StateNumber>197533</StateNumber>
       <UnderlyingIndexId>119706</UnderlyingIndexId>
     </key>
-    <key id="558" parent="348" name="flights_flight_no_scheduled_departure_key">
+    <key id="559" parent="349" name="flights_flight_no_scheduled_departure_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119705</ObjectId>
       <StateNumber>197532</StateNumber>
       <UnderlyingIndexId>119704</UnderlyingIndexId>
     </key>
-    <check id="559" parent="349" name="seats_fare_conditions_check">
+    <check id="560" parent="350" name="seats_fare_conditions_check">
       <ColNames>fare_conditions</ColNames>
       <ObjectId>119677</ObjectId>
       <Predicate>(fare_conditions)::text = ANY (ARRAY[(&apos;Economy&apos;::character varying)::text, (&apos;Comfort&apos;::character varying)::text, (&apos;Business&apos;::character varying)::text])</Predicate>
       <StateNumber>197485</StateNumber>
     </check>
-    <column id="560" parent="349" name="aircraft_code">
+    <column id="561" parent="350" name="aircraft_code">
       <Comment>Код самолета, IATA</Comment>
       <DasType>char(3)|0s</DasType>
       <NotNull>1</NotNull>
@@ -7084,7 +7094,7 @@ scheduled_departure</ColNames>
       <StateNumber>197485</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="561" parent="349" name="seat_no">
+    <column id="562" parent="350" name="seat_no">
       <Comment>Номер места</Comment>
       <DasType>varchar(4)|0s</DasType>
       <NotNull>1</NotNull>
@@ -7092,7 +7102,7 @@ scheduled_departure</ColNames>
       <StateNumber>197485</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="562" parent="349" name="fare_conditions">
+    <column id="563" parent="350" name="fare_conditions">
       <Comment>Класс обслуживания</Comment>
       <DasType>varchar(10)|0s</DasType>
       <NotNull>1</NotNull>
@@ -7100,7 +7110,7 @@ scheduled_departure</ColNames>
       <StateNumber>197485</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="563" parent="349" name="seats_aircraft_code_fkey">
+    <foreign-key id="564" parent="350" name="seats_aircraft_code_fkey">
       <ColNames>aircraft_code</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119734</ObjectId>
@@ -7109,7 +7119,7 @@ scheduled_departure</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>119634</RefTableId>
     </foreign-key>
-    <index id="564" parent="349" name="seats_pkey">
+    <index id="565" parent="350" name="seats_pkey">
       <ColNames>aircraft_code
 seat_no</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -7125,26 +7135,26 @@ default</CollationNames>
       <CollationParentNames>pg_catalog
 pg_catalog</CollationParentNames>
     </index>
-    <key id="565" parent="349" name="seats_pkey">
+    <key id="566" parent="350" name="seats_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119709</ObjectId>
       <Primary>1</Primary>
       <StateNumber>197534</StateNumber>
       <UnderlyingIndexId>119708</UnderlyingIndexId>
     </key>
-    <check id="566" parent="350" name="ticket_flights_fare_conditions_check">
+    <check id="567" parent="351" name="ticket_flights_fare_conditions_check">
       <ColNames>fare_conditions</ColNames>
       <ObjectId>119682</ObjectId>
       <Predicate>(fare_conditions)::text = ANY (ARRAY[(&apos;Economy&apos;::character varying)::text, (&apos;Comfort&apos;::character varying)::text, (&apos;Business&apos;::character varying)::text])</Predicate>
       <StateNumber>197491</StateNumber>
     </check>
-    <check id="567" parent="350" name="ticket_flights_amount_check">
+    <check id="568" parent="351" name="ticket_flights_amount_check">
       <ColNames>amount</ColNames>
       <ObjectId>119681</ObjectId>
       <Predicate>amount &gt;= (0)::numeric</Predicate>
       <StateNumber>197491</StateNumber>
     </check>
-    <column id="568" parent="350" name="ticket_no">
+    <column id="569" parent="351" name="ticket_no">
       <Comment>Номер билета</Comment>
       <DasType>char(13)|0s</DasType>
       <NotNull>1</NotNull>
@@ -7152,7 +7162,7 @@ pg_catalog</CollationParentNames>
       <StateNumber>197491</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="569" parent="350" name="flight_id">
+    <column id="570" parent="351" name="flight_id">
       <Comment>Идентификатор рейса</Comment>
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
@@ -7160,7 +7170,7 @@ pg_catalog</CollationParentNames>
       <StateNumber>197491</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="570" parent="350" name="fare_conditions">
+    <column id="571" parent="351" name="fare_conditions">
       <Comment>Класс обслуживания</Comment>
       <DasType>varchar(10)|0s</DasType>
       <NotNull>1</NotNull>
@@ -7168,7 +7178,7 @@ pg_catalog</CollationParentNames>
       <StateNumber>197491</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="571" parent="350" name="amount">
+    <column id="572" parent="351" name="amount">
       <Comment>Стоимость перелета</Comment>
       <DasType>numeric(10,2 digit)|0s</DasType>
       <NotNull>1</NotNull>
@@ -7176,7 +7186,7 @@ pg_catalog</CollationParentNames>
       <StateNumber>197491</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <foreign-key id="572" parent="350" name="ticket_flights_ticket_no_fkey">
+    <foreign-key id="573" parent="351" name="ticket_flights_ticket_no_fkey">
       <ColNames>ticket_no</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119744</ObjectId>
@@ -7184,7 +7194,7 @@ pg_catalog</CollationParentNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>119683</RefTableId>
     </foreign-key>
-    <foreign-key id="573" parent="350" name="ticket_flights_flight_id_fkey">
+    <foreign-key id="574" parent="351" name="ticket_flights_flight_id_fkey">
       <ColNames>flight_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119739</ObjectId>
@@ -7192,7 +7202,7 @@ pg_catalog</CollationParentNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>119653</RefTableId>
     </foreign-key>
-    <index id="574" parent="350" name="ticket_flights_pkey">
+    <index id="575" parent="351" name="ticket_flights_pkey">
       <ColNames>ticket_no
 flight_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -7205,14 +7215,14 @@ flight_id</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="575" parent="350" name="ticket_flights_pkey">
+    <key id="576" parent="351" name="ticket_flights_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119711</ObjectId>
       <Primary>1</Primary>
       <StateNumber>197535</StateNumber>
       <UnderlyingIndexId>119710</UnderlyingIndexId>
     </key>
-    <column id="576" parent="351" name="ticket_no">
+    <column id="577" parent="352" name="ticket_no">
       <Comment>Номер билета</Comment>
       <DasType>char(13)|0s</DasType>
       <NotNull>1</NotNull>
@@ -7220,7 +7230,7 @@ flight_id</ColNames>
       <StateNumber>197498</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="577" parent="351" name="book_ref">
+    <column id="578" parent="352" name="book_ref">
       <Comment>Номер бронирования</Comment>
       <DasType>char(6)|0s</DasType>
       <NotNull>1</NotNull>
@@ -7228,7 +7238,7 @@ flight_id</ColNames>
       <StateNumber>197498</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="578" parent="351" name="passenger_id">
+    <column id="579" parent="352" name="passenger_id">
       <Comment>Идентификатор пассажира</Comment>
       <DasType>varchar(20)|0s</DasType>
       <NotNull>1</NotNull>
@@ -7236,7 +7246,7 @@ flight_id</ColNames>
       <StateNumber>197498</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="579" parent="351" name="passenger_name">
+    <column id="580" parent="352" name="passenger_name">
       <Comment>Имя пассажира</Comment>
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
@@ -7244,14 +7254,14 @@ flight_id</ColNames>
       <StateNumber>197498</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="580" parent="351" name="contact_data">
+    <column id="581" parent="352" name="contact_data">
       <Comment>Контактные данные пассажира</Comment>
       <DasType>jsonb|0s</DasType>
       <Position>5</Position>
       <StateNumber>197498</StateNumber>
       <TypeId>3802</TypeId>
     </column>
-    <foreign-key id="581" parent="351" name="tickets_book_ref_fkey">
+    <foreign-key id="582" parent="352" name="tickets_book_ref_fkey">
       <ColNames>book_ref</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119749</ObjectId>
@@ -7259,7 +7269,7 @@ flight_id</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>119650</RefTableId>
     </foreign-key>
-    <index id="582" parent="351" name="tickets_pkey">
+    <index id="583" parent="352" name="tickets_pkey">
       <ColNames>ticket_no</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119712</ObjectId>
@@ -7271,128 +7281,128 @@ flight_id</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="583" parent="351" name="tickets_pkey">
+    <key id="584" parent="352" name="tickets_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>119713</ObjectId>
       <Primary>1</Primary>
       <StateNumber>197536</StateNumber>
       <UnderlyingIndexId>119712</UnderlyingIndexId>
     </key>
-    <column id="584" parent="352" name="flight_id">
+    <column id="585" parent="353" name="flight_id">
       <Comment>Идентификатор рейса</Comment>
       <DasType>integer|0s</DasType>
       <Position>1</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="585" parent="352" name="flight_no">
+    <column id="586" parent="353" name="flight_no">
       <Comment>Номер рейса</Comment>
       <DasType>char(6)|0s</DasType>
       <Position>2</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="586" parent="352" name="scheduled_departure">
+    <column id="587" parent="353" name="scheduled_departure">
       <Comment>Время вылета по расписанию</Comment>
       <DasType>timestamp with time zone|0s</DasType>
       <Position>3</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="587" parent="352" name="scheduled_departure_local">
+    <column id="588" parent="353" name="scheduled_departure_local">
       <Comment>Время вылета по расписанию, местное время в пункте отправления</Comment>
       <DasType>timestamp|0s</DasType>
       <Position>4</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="588" parent="352" name="scheduled_arrival">
+    <column id="589" parent="353" name="scheduled_arrival">
       <Comment>Время прилёта по расписанию</Comment>
       <DasType>timestamp with time zone|0s</DasType>
       <Position>5</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="589" parent="352" name="scheduled_arrival_local">
+    <column id="590" parent="353" name="scheduled_arrival_local">
       <Comment>Время прилёта по расписанию, местное время в пункте прибытия</Comment>
       <DasType>timestamp|0s</DasType>
       <Position>6</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="590" parent="352" name="scheduled_duration">
+    <column id="591" parent="353" name="scheduled_duration">
       <Comment>Планируемая продолжительность полета</Comment>
       <DasType>interval|0s</DasType>
       <Position>7</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="591" parent="352" name="departure_airport">
+    <column id="592" parent="353" name="departure_airport">
       <Comment>Код аэропорта отправления</Comment>
       <DasType>char(3)|0s</DasType>
       <Position>8</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="592" parent="352" name="departure_airport_name">
+    <column id="593" parent="353" name="departure_airport_name">
       <Comment>Название аэропорта отправления</Comment>
       <DasType>text|0s</DasType>
       <Position>9</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="593" parent="352" name="departure_city">
+    <column id="594" parent="353" name="departure_city">
       <Comment>Город отправления</Comment>
       <DasType>text|0s</DasType>
       <Position>10</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="594" parent="352" name="arrival_airport">
+    <column id="595" parent="353" name="arrival_airport">
       <Comment>Код аэропорта прибытия</Comment>
       <DasType>char(3)|0s</DasType>
       <Position>11</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="595" parent="352" name="arrival_airport_name">
+    <column id="596" parent="353" name="arrival_airport_name">
       <Comment>Название аэропорта прибытия</Comment>
       <DasType>text|0s</DasType>
       <Position>12</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="596" parent="352" name="arrival_city">
+    <column id="597" parent="353" name="arrival_city">
       <Comment>Город прибытия</Comment>
       <DasType>text|0s</DasType>
       <Position>13</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="597" parent="352" name="status">
+    <column id="598" parent="353" name="status">
       <Comment>Статус рейса</Comment>
       <DasType>varchar(20)|0s</DasType>
       <Position>14</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="598" parent="352" name="aircraft_code">
+    <column id="599" parent="353" name="aircraft_code">
       <Comment>Код самолета, IATA</Comment>
       <DasType>char(3)|0s</DasType>
       <Position>15</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="599" parent="352" name="actual_departure">
+    <column id="600" parent="353" name="actual_departure">
       <Comment>Фактическое время вылета</Comment>
       <DasType>timestamp with time zone|0s</DasType>
       <Position>16</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="600" parent="352" name="actual_departure_local">
+    <column id="601" parent="353" name="actual_departure_local">
       <Comment>Фактическое время вылета, местное время в пункте отправления</Comment>
       <DasType>timestamp|0s</DasType>
       <Position>17</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="601" parent="352" name="actual_arrival">
+    <column id="602" parent="353" name="actual_arrival">
       <Comment>Фактическое время прилёта</Comment>
       <DasType>timestamp with time zone|0s</DasType>
       <Position>18</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="602" parent="352" name="actual_arrival_local">
+    <column id="603" parent="353" name="actual_arrival_local">
       <Comment>Фактическое время прилёта, местное время в пункте прибытия</Comment>
       <DasType>timestamp|0s</DasType>
       <Position>19</Position>
       <StateNumber>197449</StateNumber>
     </column>
-    <column id="603" parent="352" name="actual_duration">
+    <column id="604" parent="353" name="actual_duration">
       <Comment>Фактическая продолжительность полета</Comment>
       <DasType>interval|0s</DasType>
       <Position>20</Position>
