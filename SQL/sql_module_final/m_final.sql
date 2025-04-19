@@ -65,7 +65,7 @@ ORDER BY departure_airport, actual_departure;
 --Решение должно быть через оконную функцию.
 
 SELECT ad.airport_name AS dept_airport_name, aa.airport_name AS arr_airport_name,
-       COUNT(f.flight_id) * 100 / SUM(COUNT(f.flight_id)) OVER () AS flights_percentage
+       COUNT(f.flight_id) * 100 / SUM(COUNT(f.flight_id)) OVER () AS flights_percent_rate
        FROM flights AS f
 JOIN airports AS ad ON ad.airport_code = f.departure_airport
 JOIN airports AS aa ON aa.airport_code = f.arrival_airport
@@ -74,8 +74,8 @@ GROUP BY ad.airport_code, aa.airport_code;
 
 
 --ЗАДАНИЕ №6
--- Выведите количество пассажиров по каждому коду сотового оператора, если учесть,
--- что код оператора - это три символа после +7
+--Выведите количество пассажиров по каждому коду сотового оператора, если учесть,
+--что код оператора - это три символа после +7
 
 WITH phone_codes AS (
     SELECT
@@ -91,17 +91,64 @@ GROUP BY cell_code;
 
 
 --ЗАДАНИЕ №7
--- Классифицируйте финансовые обороты (сумма стоимости перелетов) по маршрутам:
+--Классифицируйте финансовые обороты (сумма стоимости перелетов) по маршрутам:
 --До 50 млн - low
 --От 50 млн включительно до 150 млн - middle
 --От 150 млн включительно - high
 --Выведите в результат количество маршрутов в каждом полученном классе
 
-SELECT flight_id, SUM(amount),
-    CASE
-        WHEN SUM(amount) < 50000000 THEN 'low'
-        WHEN SUM(amount) BETWEEN 50000000 AND 150000000 THEN 'middle'
-        ELSE 'high'
-    END AS total_amount
-FROM ticket_flights
-GROUP BY flight_id;
+SELECT turnover_class, COUNT(turnover_class) AS routes_sum FROM(
+    SELECT
+        CASE
+            WHEN SUM(amount) < 50000000 THEN 'low'
+            WHEN SUM(amount) >= 50000000 AND SUM(amount) < 150000000 THEN 'middle'
+            ELSE 'high'
+        END AS turnover_class
+    FROM ticket_flights AS ft
+    JOIN flights AS f ON f.flight_id = ft.flight_id
+    GROUP BY f.departure_airport, f.arrival_airport) AS cls
+GROUP BY turnover_class;
+
+
+--ЗАДАНИЕ №8
+--Вычислите медиану стоимости перелетов, медиану размера бронирования и отношение медианы
+--бронирования к медиане стоимости перелетов, округленной до сотых
+
+WITH flights_median AS (
+  SELECT
+    PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY amount) AS med_flght_amnt
+  FROM ticket_flights
+),
+    bookings_median AS (
+  SELECT
+     PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY total_amount) AS med_book_amnt
+  FROM bookings
+        )
+SELECT
+  ROUND((mba.med_book_amnt / mfa.med_flght_amnt)::numeric, 2) AS median_rate
+FROM flights_median AS mfa, bookings_median AS mba;
+
+
+--ЗАДАНИЕ №9
+--Найдите значение минимальной стоимости полета 1 км для пассажиров.
+--То есть нужно найти расстояние между аэропортами и с учетом стоимости перелетов
+--получить искомый результат
+
+--CREATE EXTENSION cube;
+--CREATE EXTENSION earthdistance;
+
+WITH distance_between_airports_km AS (SELECT CONCAT(a1.airport_code, a2.airport_code) AS joint_apt_id,
+       earth_distance(ll_to_earth(a1.latitude, a1.longitude),
+                      ll_to_earth(a2.latitude, a2.longitude)) / 1000 as airport_distance_km
+FROM airports AS a1, airports AS a2
+WHERE a1.airport_code != a2.airport_code),
+
+min_amount_between_airports AS (SELECT CONCAT(f.departure_airport, f.arrival_airport) AS joint_apt_id,
+                                       MIN(tf.amount) AS min_route_amount FROM flights AS f
+JOIN ticket_flights AS tf ON tf.flight_id = f.flight_id
+GROUP BY f.departure_airport, f.arrival_airport)
+
+SELECT ROUND((min_route_amount / airport_distance_km)::numeric, 2) AS min_flight_rate_per_km FROM distance_between_airports_km AS dbak
+JOIN min_amount_between_airports AS maba ON maba.joint_apt_id = dbak.joint_apt_id
+ORDER BY min_flight_rate_per_km
+LIMIT 1;
