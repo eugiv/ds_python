@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="stat_module_3 changes">
-      <change afterPath="$PROJECT_DIR$/big_data/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/big_data/bd_module_2/Homework_template.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/big_data/bd_module_2/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/big_data/bd_module_2/homework.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big_data/module_6/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big_data/module_6/iris.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/big_data/module_6/module_6.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,9 +18,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
         <option value="SQL File" />
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -99,11 +98,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/big_data/module_6" />
       <recent name="$PROJECT_DIR$/big_data/bd_module_2" />
       <recent name="$PROJECT_DIR$/SQL/sql_module_final" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/SQL/sql_module_6" />
-      <recent name="$PROJECT_DIR$/SQL/sql_module_5" />
     </key>
   </component>
   <component name="RunManager" selected="Database Script.m2-utf8.sql">
@@ -415,7 +414,9 @@
       <workItem from="1745516353958" duration="628000" />
       <workItem from="1745570243903" duration="6810000" />
       <workItem from="1745613757096" duration="989000" />
-      <workItem from="1745661291757" duration="4030000" />
+      <workItem from="1745661291757" duration="7804000" />
+      <workItem from="1745679448555" duration="1606000" />
+      <workItem from="1746201730824" duration="7243000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
