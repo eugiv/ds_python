@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="stat_module_3 changes">
-      <change afterPath="$PROJECT_DIR$/math_python/HW_2_upd.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/math_python/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -417,7 +415,7 @@
       <workItem from="1745679448555" duration="1606000" />
       <workItem from="1746201730824" duration="10023000" />
       <workItem from="1746293752749" duration="7000" />
-      <workItem from="1749836504413" duration="4728000" />
+      <workItem from="1749836504413" duration="5492000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
