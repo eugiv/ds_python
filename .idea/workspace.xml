@@ -14,8 +14,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SQL File" />
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -45,47 +45,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Database Script.m2-utf8.sql.executor&quot;: &quot;Run&quot;,
-    &quot;Python.designer_cls.executor&quot;: &quot;Run&quot;,
-    &quot;Python.habr_scrap.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_4.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_6.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_7.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pd_module_1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.rate_cls.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;Excel (xlsx)&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/eugene_ivanov/PycharmProjects/ds_python/statistics_python/stat_module_4&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Database Script.m2-utf8.sql.executor": "Run",
+    "Python.designer_cls.executor": "Run",
+    "Python.habr_scrap.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.module_2.executor": "Run",
+    "Python.module_3.executor": "Run",
+    "Python.module_4.executor": "Run",
+    "Python.module_5.executor": "Run",
+    "Python.module_6.executor": "Run",
+    "Python.module_7.executor": "Run",
+    "Python.pd_module_1.executor": "Run",
+    "Python.rate_cls.executor": "Run",
+    "Python.test (1).executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "database.data.extractors.current.export.id": "Excel (xlsx)",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/eugene_ivanov/PycharmProjects/ds_python/statistics_python/stat_module_4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "database.query.execution",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;RunConfigurationTargetLRU&quot;: [
-      &quot;f4675c57-1372-453e-9273-fc3ed2aaf46a/database/\&quot;postgres\&quot;/schema/\&quot;public\&quot;&quot;
+    "RunConfigurationTargetLRU": [
+      "f4675c57-1372-453e-9273-fc3ed2aaf46a/database/\"postgres\"/schema/\"public\""
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
-      &quot;PostgreSQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "PostgreSQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/statistics_python/stat_module_4" />
@@ -93,14 +94,14 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/big_data/final_module" />
       <recent name="$PROJECT_DIR$/math_python" />
       <recent name="$PROJECT_DIR$/big_data/module_6" />
       <recent name="$PROJECT_DIR$/big_data/bd_module_2" />
       <recent name="$PROJECT_DIR$/SQL/sql_module_final" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Database Script.m2-utf8.sql">
+  <component name="RunManager" selected="Python.designer_cls">
     <configuration name="m2-utf8.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/SQL/m2-utf8.sql" />
       <script-mode>FILE</script-mode>
@@ -301,7 +302,6 @@
       <list>
         <item itemvalue="Python.test" />
         <item itemvalue="Python.test (1)" />
-        <item itemvalue="Database Script.m2-utf8.sql" />
         <item itemvalue="Python.designer_cls" />
         <item itemvalue="Python.habr_scrap" />
       </list>
@@ -310,8 +310,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.18034.82" />
-        <option value="bundled-python-sdk-975db3bf15a3-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.18034.82" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-PY-251.26094.141" />
+        <option value="bundled-python-sdk-9f8e2b94138c-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26094.141" />
       </set>
     </attachedChunks>
   </component>
@@ -418,6 +418,7 @@
       <workItem from="1750356248356" duration="1262000" />
       <workItem from="1750588979285" duration="4442000" />
       <workItem from="1750693344784" duration="3155000" />
+      <workItem from="1751718518222" duration="23553000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
