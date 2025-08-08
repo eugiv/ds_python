@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="stat_module_3 changes">
-      <change afterPath="$PROJECT_DIR$/math_python/HW_8_upd.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_engeneering/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/Iris_dataset.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/Linear regression.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/Logistic_regression_athletes_classifier.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/Regression_cars.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/SAT_model.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/adult.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/athletes.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/cars.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/hw_2.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/sat.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/math_python/HW_7_upd.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/math_python/HW_7_upd.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,11 +107,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/feature_engeneering/log_regression_svm" />
       <recent name="$PROJECT_DIR$/math_python" />
       <recent name="$PROJECT_DIR$/big_data/final_module" />
       <recent name="$PROJECT_DIR$/big_data/module_6" />
       <recent name="$PROJECT_DIR$/big_data/bd_module_2" />
-      <recent name="$PROJECT_DIR$/SQL/sql_module_final" />
     </key>
   </component>
   <component name="RunManager" selected="Python.designer_cls">
@@ -426,7 +435,8 @@
       <workItem from="1753191978151" duration="8575000" />
       <workItem from="1753256995682" duration="2420000" />
       <workItem from="1753284602720" duration="1576000" />
-      <workItem from="1753898889358" duration="2091000" />
+      <workItem from="1753898889358" duration="4774000" />
+      <workItem from="1754689943516" duration="3702000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
