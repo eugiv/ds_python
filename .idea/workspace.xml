@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="stat_module_3 changes">
-      <change afterPath="$PROJECT_DIR$/feature_engeneering/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/Iris_dataset.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/Linear regression.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/Logistic_regression_athletes_classifier.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/Regression_cars.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/SAT_model.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/adult.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/athletes.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/cars.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/hw_2.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/sat.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/hw_2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/feature_engeneering/log_regression_svm/hw_2.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -437,6 +427,8 @@
       <workItem from="1753284602720" duration="1576000" />
       <workItem from="1753898889358" duration="4774000" />
       <workItem from="1754689943516" duration="3702000" />
+      <workItem from="1754693655467" duration="1074000" />
+      <workItem from="1754726656625" duration="5858000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
