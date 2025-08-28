@@ -53,6 +53,9 @@ plt.show()
 
 # 4
 ma_plot_df = gp_df.groupby('Дата')['ВП'].sum().reset_index()
+ma_plot_df = ma_plot_df.set_index('Дата')
+
+ma_plot_df = ma_plot_df.asfreq('D')
 ma_plot_df['gp_ma_15'] = ma_plot_df['ВП'].rolling(window=15, min_periods=1).mean()
 
 plt.figure(figsize=(12, 6))
