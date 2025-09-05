@@ -26,8 +26,8 @@ gp_df = common_df[
     ]
 ].copy()
 
-gp_df['Дата'] = pd.to_datetime(gp_df['Дата'])
-gp_df = gp_df.sort_values('Дата')
+gp_df["Дата"] = pd.to_datetime(gp_df["Дата"])
+gp_df = gp_df.sort_values("Дата")
 
 gp_df["Выручка"] = gp_df["Цена продажи,р"] * gp_df["Кол-во"]
 
@@ -37,33 +37,45 @@ gp_df["ВП"] = (
 ).round(2)
 
 # 3
-gp_df['Неделя'] = gp_df['Дата'].dt.to_period('W').dt.start_time
-weekly_plot_df = gp_df.groupby('Неделя')['ВП'].sum().reset_index()
+gp_df["Неделя"] = gp_df["Дата"].dt.to_period("W").dt.start_time
+weekly_plot_df = gp_df.groupby("Неделя")["ВП"].sum().reset_index()
 
 plt.figure(figsize=(12, 6))
-sns.lineplot(data=weekly_plot_df, x='Неделя', y='ВП', marker='o')
-plt.title('Валовая прибыль по неделям')
-plt.xlabel('Неделя')
-plt.ylabel('ВП (руб)')
-week_labels = [f"{i+1} н. ({date.strftime('%d.%m')})" for i, date in enumerate(weekly_plot_df['Неделя'])]
-plt.xticks(weekly_plot_df['Неделя'], week_labels, rotation=45)
+sns.lineplot(data=weekly_plot_df, x="Неделя", y="ВП", marker="o")
+plt.title("Валовая прибыль по неделям")
+plt.xlabel("Неделя")
+plt.ylabel("ВП (руб)")
+week_labels = [
+    f"{i+1} н. ({date.strftime('%d.%m')})"
+    for i, date in enumerate(weekly_plot_df["Неделя"])
+]
+plt.xticks(weekly_plot_df["Неделя"], week_labels, rotation=45)
 plt.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
 
 # 4
-ma_plot_df = gp_df.groupby('Дата')['ВП'].sum().reset_index()
-ma_plot_df = ma_plot_df.set_index('Дата')
+ma_plot_df = gp_df.groupby("Дата")["ВП"].sum().reset_index()
+ma_plot_df = ma_plot_df.set_index("Дата")
 
-ma_plot_df = ma_plot_df.asfreq('D')
-ma_plot_df['gp_ma_15'] = ma_plot_df['ВП'].rolling(window=15, min_periods=1).mean()
+ma_plot_df = ma_plot_df.asfreq("D")
+ma_plot_df["gp_ma_15"] = ma_plot_df["ВП"].rolling(window=15, min_periods=1).mean()
 
 plt.figure(figsize=(12, 6))
-sns.lineplot(data=ma_plot_df, x='Дата', y='ВП', marker='o', label='ВП по дням', err_style=None)
-sns.lineplot(data=ma_plot_df, x='Дата', y='gp_ma_15', color='red', label='Скользящая средняя 15д', err_style=None)
-plt.title('ВП со скользящей средней 15д')
-plt.xlabel('Дата')
-plt.ylabel('ВП (руб)')
+sns.lineplot(
+    data=ma_plot_df, x="Дата", y="ВП", marker="o", label="ВП по дням", err_style=None
+)
+sns.lineplot(
+    data=ma_plot_df,
+    x="Дата",
+    y="gp_ma_15",
+    color="red",
+    label="Скользящая средняя 15д",
+    err_style=None,
+)
+plt.title("ВП со скользящей средней 15д")
+plt.xlabel("Дата")
+plt.ylabel("ВП (руб)")
 plt.xticks(rotation=45)
 plt.grid(True, alpha=0.3)
 plt.legend()
