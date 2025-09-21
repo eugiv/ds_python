@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="stat_module_3 changes" />
+    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="stat_module_3 changes">
+      <change afterPath="$PROJECT_DIR$/feature_engeneering/fe_hw_5/fe_hw_5_apts.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_engeneering/fe_hw_5/features.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature_engeneering/fe_hw_3/athletes.xlsx" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,11 +101,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/feature_engeneering/fe_hw_5" />
       <recent name="$PROJECT_DIR$/feature_engeneering/fe_hw_4" />
       <recent name="$PROJECT_DIR$/feature_engeneering/fe_hw_3" />
       <recent name="$PROJECT_DIR$/test_job" />
       <recent name="$PROJECT_DIR$/math_python" />
-      <recent name="$PROJECT_DIR$/feature_engeneering/log_regression_svm" />
     </key>
   </component>
   <component name="RunManager" selected="Python.designer_cls">
@@ -443,6 +448,12 @@
       <workItem from="1757180118280" duration="10833000" />
       <workItem from="1757515518634" duration="6560000" />
       <workItem from="1757759942891" duration="13118000" />
+      <workItem from="1757849778662" duration="7665000" />
+      <workItem from="1757932927646" duration="4138000" />
+      <workItem from="1758139870245" duration="853000" />
+      <workItem from="1758190260015" duration="4322000" />
+      <workItem from="1758345074897" duration="2913000" />
+      <workItem from="1758466828413" duration="10982000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
