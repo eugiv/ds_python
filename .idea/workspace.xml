@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="stat_module_3 changes">
-      <change beforePath="$PROJECT_DIR$/feature_engeneering/fe_hw_5/fe_hw_5_apts.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/feature_engeneering/fe_hw_5/fe_hw_5_apts.ipynb" afterDir="false" />
+    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -450,7 +450,7 @@
       <workItem from="1758139870245" duration="853000" />
       <workItem from="1758190260015" duration="4322000" />
       <workItem from="1758345074897" duration="2913000" />
-      <workItem from="1758466828413" duration="11325000" />
+      <workItem from="1758466828413" duration="12653000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
@@ -524,7 +524,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740865177662</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="changes">
+      <option name="closed" value="true" />
+      <created>1758478341368</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1758478341368</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,7 +545,8 @@
     <MESSAGE value="finished stat_module_2" />
     <MESSAGE value="start stat_module_3" />
     <MESSAGE value="stat_module_3 changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="stat_module_3 changes" />
+    <MESSAGE value="changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ds_python$module_4.coverage" NAME="module_4 Coverage Results" MODIFIED="1731724166671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
