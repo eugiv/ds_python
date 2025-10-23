@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="changes">
+      <change afterPath="$PROJECT_DIR$/feature_engeneering/fe_hw_8/fe_hw_glass.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_engeneering/fe_hw_8/glass.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature_engeneering/fe_hw_7/fe_hw_7_heart.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/feature_engeneering/fe_hw_7/fe_hw_7_heart.ipynb" afterDir="false" />
     </list>
@@ -63,6 +65,7 @@
     &quot;Python.module_7.executor&quot;: &quot;Run&quot;,
     &quot;Python.pd_module_1.executor&quot;: &quot;Run&quot;,
     &quot;Python.rate_cls.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stepik_test.executor&quot;: &quot;Run&quot;,
     &quot;Python.test (1).executor&quot;: &quot;Run&quot;,
     &quot;Python.test.executor&quot;: &quot;Run&quot;,
     &quot;Python.testqqq_job.executor&quot;: &quot;Run&quot;,
@@ -99,11 +102,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/feature_engeneering/fe_hw_8" />
       <recent name="$PROJECT_DIR$/feature_engeneering/fe_hw_7" />
       <recent name="$PROJECT_DIR$/feature_engeneering/fe_hw_5" />
       <recent name="$PROJECT_DIR$/feature_engeneering/fe_hw_4" />
       <recent name="$PROJECT_DIR$/feature_engeneering/fe_hw_3" />
-      <recent name="$PROJECT_DIR$/test_job" />
     </key>
   </component>
   <component name="RunManager" selected="Python.designer_cls">
@@ -456,7 +459,10 @@
       <workItem from="1758703758495" duration="2212000" />
       <workItem from="1758746488969" duration="4723000" />
       <workItem from="1758894144936" duration="6329000" />
-      <workItem from="1758962284487" duration="9171000" />
+      <workItem from="1758962284487" duration="9670000" />
+      <workItem from="1759051946055" duration="2005000" />
+      <workItem from="1760646178772" duration="6567000" />
+      <workItem from="1761244871538" duration="11360000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
@@ -564,6 +570,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ds_python$module_4.coverage" NAME="module_4 Coverage Results" MODIFIED="1731724166671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ds_python$stepik_test.coverage" NAME="stepik_test Coverage Results" MODIFIED="1760651532248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/feature_engeneering" />
     <SUITE FILE_PATH="coverage/ds_python$pd_module_1.coverage" NAME="pd_module_1 Coverage Results" MODIFIED="1734361576926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pandas_python/pd_module_1" />
     <SUITE FILE_PATH="coverage/ds_python$module_7.coverage" NAME="module_7 Coverage Results" MODIFIED="1733165570116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ds_python$rate_cls.coverage" NAME="rate_cls Coverage Results" MODIFIED="1733165885458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
