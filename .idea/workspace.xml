@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="changes">
-      <change afterPath="$PROJECT_DIR$/feature_engeneering/fe_hw_8/fe_hw_glass.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature_engeneering/fe_hw_8/glass.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature_engeneering/fe_hw_7/fe_hw_7_heart.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/feature_engeneering/fe_hw_7/fe_hw_7_heart.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -462,7 +457,7 @@
       <workItem from="1758962284487" duration="9670000" />
       <workItem from="1759051946055" duration="2005000" />
       <workItem from="1760646178772" duration="6567000" />
-      <workItem from="1761244871538" duration="11360000" />
+      <workItem from="1761244871538" duration="11544000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
