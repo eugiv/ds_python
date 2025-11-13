@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_network/Intro_to_NN_3__hw_.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/neural_network/Intro_to_NN_3__hw_.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_network/logs/single_model_adam/train/events.out.tfevents.1763038840.Eugenes-MacBook-Pro.local.41167.31.v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_network/logs/single_model_adam/validation/events.out.tfevents.1763038846.Eugenes-MacBook-Pro.local.41167.32.v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_network/logs/single_model_momentum/train/events.out.tfevents.1763038317.Eugenes-MacBook-Pro.local.41167.29.v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_network/logs/single_model_momentum/validation/events.out.tfevents.1763038322.Eugenes-MacBook-Pro.local.41167.30.v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_network/logs/single_model_sgd/train/events.out.tfevents.1763037823.Eugenes-MacBook-Pro.local.41167.27.v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_network/logs/single_model_sgd/validation/events.out.tfevents.1763037827.Eugenes-MacBook-Pro.local.41167.28.v2" beforeDir="false" />
-    </list>
+    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -471,7 +462,7 @@
       <workItem from="1761244871538" duration="11544000" />
       <workItem from="1761297331851" duration="7223000" />
       <workItem from="1762717526683" duration="865000" />
-      <workItem from="1763032050039" duration="10300000" />
+      <workItem from="1763032050039" duration="10722000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
