@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="changes" />
+    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="changes">
+      <change afterPath="$PROJECT_DIR$/recommedation_systems/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommedation_systems/rs_hw_1/links.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommedation_systems/rs_hw_1/movies.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommedation_systems/rs_hw_1/ratings.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommedation_systems/rs_hw_1/rs_hw_1.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommedation_systems/rs_hw_1/tags.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neural_network/Intro_to_NN_3__hw_.ipynb" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SQL File" />
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -70,7 +79,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;database.data.extractors.current.export.id&quot;: &quot;Excel (xlsx)&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/eugene_ivanov/PycharmProjects/ds_python/neural_network&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/eugene_ivanov/PycharmProjects/ds_python/recommedation_systems/rs_hw_1&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -93,6 +102,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/recommedation_systems/rs_hw_1" />
       <recent name="$PROJECT_DIR$/neural_network" />
       <recent name="$PROJECT_DIR$/statistics_python/stat_module_4" />
       <recent name="$PROJECT_DIR$/pandas_python/pd_module_2" />
@@ -462,7 +472,10 @@
       <workItem from="1761244871538" duration="11544000" />
       <workItem from="1761297331851" duration="7223000" />
       <workItem from="1762717526683" duration="865000" />
-      <workItem from="1763032050039" duration="13318000" />
+      <workItem from="1763032050039" duration="14450000" />
+      <workItem from="1764926348000" duration="8621000" />
+      <workItem from="1764939478387" duration="5987000" />
+      <workItem from="1765014678255" duration="6077000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
