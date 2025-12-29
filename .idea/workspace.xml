@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="changes">
-      <change afterPath="$PROJECT_DIR$/recommedation_systems/rs_hw_2/links.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommedation_systems/rs_hw_2/movies.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommedation_systems/rs_hw_2/ratings.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommedation_systems/rs_hw_2/rs_hw_2.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommedation_systems/rs_hw_2/tags.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ef71ca5f-70ee-418d-9a6a-89842285562a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ef71ca5f-70ee-418d-9a6a-89842285562a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4675c57-1372-453e-9273-fc3ed2aaf46a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f4675c57-1372-453e-9273-fc3ed2aaf46a.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommedation_systems/rs_hw_3/links.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommedation_systems/rs_hw_3/movies.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommedation_systems/rs_hw_3/ratings.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommedation_systems/rs_hw_3/rs_hw_3.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recommedation_systems/rs_hw_3/tags.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,9 +76,10 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ai.playground.ignore.import.keys.banner.in.settings": "true",
     "database.data.extractors.current.export.id": "Excel (xlsx)",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/eugene_ivanov/PycharmProjects/ds_python/recommedation_systems",
+    "last_opened_file_path": "/Users/eugene_ivanov/PycharmProjects/ds_python/recommedation_systems/rs_hw_3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -102,11 +102,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/recommedation_systems/rs_hw_3" />
       <recent name="$PROJECT_DIR$/recommedation_systems" />
       <recent name="$PROJECT_DIR$/recommedation_systems/rs_hw_1" />
       <recent name="$PROJECT_DIR$/neural_network" />
       <recent name="$PROJECT_DIR$/statistics_python/stat_module_4" />
-      <recent name="$PROJECT_DIR$/pandas_python/pd_module_2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/feature_engeneering/fe_hw_8" />
@@ -329,7 +329,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-0978a7220b69-9867c7d4c0a4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.28294.336" />
+        <option value="bundled-python-sdk-f2b7a9f6281b-6e1f45a539f7-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.29346.142" />
       </set>
     </attachedChunks>
   </component>
@@ -482,6 +482,8 @@
       <workItem from="1765014678255" duration="6077000" />
       <workItem from="1765022800497" duration="7685000" />
       <workItem from="1766245625217" duration="1953000" />
+      <workItem from="1766253886100" duration="3173000" />
+      <workItem from="1767042325327" duration="5058000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
