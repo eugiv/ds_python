@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="changes">
-      <change afterPath="$PROJECT_DIR$/time_series/ts_hw_2/ts_hw_2.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_series/Series/daily-total-female-births-in-cal.csv" beforeDir="false" afterPath="$PROJECT_DIR$/time_series/ts_hw_1/Series/daily-total-female-births-in-cal.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_series/Series/international-airline-passengers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/time_series/ts_hw_1/Series/international-airline-passengers.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_series/Series/mean-monthly-air-temperature-deg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/time_series/ts_hw_1/Series/mean-monthly-air-temperature-deg.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_series/Series/monthly-boston-armed-robberies-j.csv" beforeDir="false" afterPath="$PROJECT_DIR$/time_series/ts_hw_1/Series/monthly-boston-armed-robberies-j.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_series/Series/monthly-sales-of-company-x-jan-6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/time_series/ts_hw_1/Series/monthly-sales-of-company-x-jan-6.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_series/Series/weekly-closings-of-the-dowjones-.csv" beforeDir="false" afterPath="$PROJECT_DIR$/time_series/ts_hw_1/Series/weekly-closings-of-the-dowjones-.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_series/ts_hw_1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/time_series/ts_hw_1/ts_hw_1.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -488,7 +478,7 @@
       <workItem from="1767042325327" duration="5790000" />
       <workItem from="1767082828824" duration="622000" />
       <workItem from="1767083454650" duration="12366000" />
-      <workItem from="1767286551509" duration="7357000" />
+      <workItem from="1767286551509" duration="7731000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
