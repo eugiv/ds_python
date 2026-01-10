@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="changes">
-      <change afterPath="$PROJECT_DIR$/time_series/ts_hw_4/ts_hw_4.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_series/ts_hw_3/ts_hw_3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/time_series/ts_hw_3/ts_hw_3.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -483,7 +481,8 @@
       <workItem from="1767082828824" duration="622000" />
       <workItem from="1767083454650" duration="12366000" />
       <workItem from="1767286551509" duration="14455000" />
-      <workItem from="1767356749345" duration="9234000" />
+      <workItem from="1767356749345" duration="10560000" />
+      <workItem from="1767532912699" duration="1985000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
