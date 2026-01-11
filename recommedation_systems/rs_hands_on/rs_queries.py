@@ -4,6 +4,10 @@ import seaborn as sns
 import re
 
 import pymorphy3
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
 
 
 class RsQueries:
@@ -159,8 +163,96 @@ class RsQueries:
             "has_gmv": "max"
         }
         df_sim = df_sim.groupby(['date','sku','currency','queries_count','sku_freq_category','query_cluster_repr']).agg(agg_method).round(2).reset_index()
-        df_sim.to_excel('df_sim.xlsx', index=False)
+
         return df_sim
+
+    def baseline_recommendations(self, top_n=5):
+        df_sim = self.cluster_similar_queries()
+
+        df_sim['score_seo'] = (
+            df_sim['order_count'] * 100 +
+            df_sim['view_conversion'] * 10 +
+            (1 / (df_sim['position'] + 1)) * 5
+        )
+
+        df_sim['ctr_like'] = df_sim['unique_view_users'] / df_sim['unique_search_users'].replace(0, 1)
+        df_sim['score_ad'] = (
+            df_sim['queries_count'] * 0.1 +
+            df_sim['view_conversion'] * 50 +
+            (1 / (df_sim['position'] + 1)) * 10 +
+            df_sim['ctr_like'] * 100
+        )
+
+        seo_recs = df_sim[
+            (df_sim['has_order'] == 1) | (df_sim['view_conversion'] > 0)
+        ].copy()
+        seo_recs = seo_recs.sort_values(['sku', 'score_seo'], ascending=[True, False])
+        seo_recs = seo_recs.groupby('sku').head(top_n).reset_index(drop=True)
+        seo_recs['recommendation_type'] = 'SEO'
+
+        ad_recs = df_sim[
+            (df_sim['queries_count'] >= 30) &  # высокочастотные запросы юзеров
+            (df_sim['unique_view_users'] < df_sim['unique_search_users'] * 0.1) &  # низкий охват
+            (df_sim['view_conversion'] > 0)  # есть хоть какая-то конверсия
+        ].copy()
+        ad_recs = ad_recs.sort_values(['sku', 'score_ad'], ascending=[True, False])
+        ad_recs = ad_recs.groupby('sku').head(top_n).reset_index(drop=True)
+        ad_recs['recommendation_type'] = 'Ad'
+
+        recommendations = pd.concat([seo_recs, ad_recs], ignore_index=True)
+
+        recommendations = recommendations[[
+            'sku',
+            'query_cluster_repr',
+            'recommendation_type',
+            'queries_count',
+            'position',
+            'view_conversion',
+            'unique_search_users',
+            'unique_view_users',
+            'order_count',
+            'gmv',
+            'score_seo',
+            'score_ad'
+        ]]
+
+        recommendations.to_excel('baseline_recommendations_extended.xlsx', index=False)
+
+        return recommendations
+
+    def build_text_profiles(self):
+        df_sim = self.cluster_similar_queries()
+
+        sku_top_query = df_sim.loc[
+            df_sim.groupby('sku')['unique_search_users'].idxmax()
+        ][['sku', 'query_cluster_repr']].reset_index(drop=True)
+
+        vectorizer = TfidfVectorizer(
+            stop_words=None,
+            ngram_range=(1, 2),
+            max_features=1000
+        )
+        tfidf_matrix = vectorizer.fit_transform(sku_top_query['query_cluster_repr'])
+
+        return sku_top_query, tfidf_matrix, vectorizer
+
+    def get_similar_skus(self, target_sku, top_n=5):
+        sku_names, tfidf_matrix, _ = self.build_text_profiles()
+
+        target_idx = sku_names[sku_names['sku'] == target_sku].index[0]
+        target_vec = tfidf_matrix[target_idx]
+
+        similarities = cosine_similarity(target_vec, tfidf_matrix).flatten()
+        sku_names['similarity'] = similarities
+
+        similar = (
+            sku_names[sku_names['sku'] != target_sku]
+            .sort_values('similarity', ascending=False)
+            .head(top_n)
+        )
+
+        similar.to_excel('similar_skus_by_top_query.xlsx', index=False)
+        return similar[['sku', 'query_cluster_repr', 'similarity']]
 
 if __name__ == "__main__":
     df = pd.read_csv("ozon_product_queries_details.csv")
@@ -168,4 +260,5 @@ if __name__ == "__main__":
     rs_model = RsQueries(df)
     # df_mod = rs_model.eda()
     # rs_model.eda_plot()
-    rs_model.cluster_similar_queries()
+    # rs_model.cluster_similar_queries()
+    rs_model.get_similar_skus(1614691389, top_n=10)

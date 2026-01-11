@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,8 +14,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SQL File" />
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -47,60 +45,61 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Database Script.m2-utf8.sql.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_job.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.designer_cls.executor&quot;: &quot;Run&quot;,
-    &quot;Python.habr_scrap.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_4.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_6.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_7.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pd_module_1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.rate_cls.executor&quot;: &quot;Run&quot;,
-    &quot;Python.stepik_test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.testqqq_job.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;Excel (xlsx)&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/eugene_ivanov/PycharmProjects/ds_python/time_series&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Database Script.m2-utf8.sql.executor": "Run",
+    "Python tests.Python tests in test_job.py.executor": "Run",
+    "Python.designer_cls.executor": "Run",
+    "Python.habr_scrap.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.module_2.executor": "Run",
+    "Python.module_3.executor": "Run",
+    "Python.module_4.executor": "Run",
+    "Python.module_5.executor": "Run",
+    "Python.module_6.executor": "Run",
+    "Python.module_7.executor": "Run",
+    "Python.pd_module_1.executor": "Run",
+    "Python.rate_cls.executor": "Run",
+    "Python.rs_queries.executor": "Run",
+    "Python.stepik_test.executor": "Run",
+    "Python.test (1).executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.testqqq_job.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ai.playground.ignore.import.keys.banner.in.settings": "true",
+    "database.data.extractors.current.export.id": "Excel (xlsx)",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/eugene_ivanov/PycharmProjects/ds_python/recommedation_systems/rs_hands_on",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "database.query.execution",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;RunConfigurationTargetLRU&quot;: [
-      &quot;f4675c57-1372-453e-9273-fc3ed2aaf46a/database/\&quot;postgres\&quot;/schema/\&quot;public\&quot;&quot;
+    "RunConfigurationTargetLRU": [
+      "f4675c57-1372-453e-9273-fc3ed2aaf46a/database/\"postgres\"/schema/\"public\""
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
-      &quot;PostgreSQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "PostgreSQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/recommedation_systems/rs_hands_on" />
       <recent name="$PROJECT_DIR$/time_series" />
       <recent name="$PROJECT_DIR$/recommedation_systems/rs_hw_3" />
       <recent name="$PROJECT_DIR$/recommedation_systems" />
       <recent name="$PROJECT_DIR$/recommedation_systems/rs_hw_1" />
-      <recent name="$PROJECT_DIR$/neural_network" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/time_series/ts_hw_1" />
@@ -110,13 +109,7 @@
       <recent name="$PROJECT_DIR$/feature_engeneering/fe_hw_4" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.designer_cls">
-    <configuration name="m2-utf8.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/SQL/m2-utf8.sql" />
-      <script-mode>FILE</script-mode>
-      <data-source id="f4675c57-1372-453e-9273-fc3ed2aaf46a" namespace="database/&quot;postgres&quot;/schema/&quot;public&quot;" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.rs_queries">
     <configuration name="m2-utf8.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/SQL/m2-utf8.sql" />
       <script-mode>FILE</script-mode>
@@ -209,6 +202,30 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pandas_python/pd_module_4/habr_scrap.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="rs_queries" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ds_python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recommedation_systems/rs_hands_on" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recommedation_systems/rs_hands_on/rs_queries.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -313,6 +330,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.rs_queries" />
         <item itemvalue="Python.designer_cls" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.test (1)" />
@@ -483,6 +501,7 @@
       <workItem from="1767286551509" duration="14455000" />
       <workItem from="1767356749345" duration="10560000" />
       <workItem from="1767532912699" duration="1985000" />
+      <workItem from="1768047821631" duration="25183000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
@@ -589,21 +608,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="changes" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ds_python$module_4.coverage" NAME="module_4 Coverage Results" MODIFIED="1731724166671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ds_python$stepik_test.coverage" NAME="stepik_test Coverage Results" MODIFIED="1760651532248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/feature_engeneering" />
-    <SUITE FILE_PATH="coverage/ds_python$pd_module_1.coverage" NAME="pd_module_1 Coverage Results" MODIFIED="1734361576926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pandas_python/pd_module_1" />
-    <SUITE FILE_PATH="coverage/ds_python$module_7.coverage" NAME="module_7 Coverage Results" MODIFIED="1733165570116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ds_python$rate_cls.coverage" NAME="rate_cls Coverage Results" MODIFIED="1733165885458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ds_python$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1745573244951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SQL/sql_module_final" />
     <SUITE FILE_PATH="coverage/ds_python$module_3.coverage" NAME="module_3 Coverage Results" MODIFIED="1730891752657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ds_python$module_6.coverage" NAME="module_6 Coverage Results" MODIFIED="1732285287688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ds_python$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1745573244951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SQL/sql_module_final" />
+    <SUITE FILE_PATH="coverage/ds_python$module_7.coverage" NAME="module_7 Coverage Results" MODIFIED="1733165570116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ds_python$habr_scrap.coverage" NAME="habr_scrap Coverage Results" MODIFIED="1737057323973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pandas_python/pd_module_4" />
+    <SUITE FILE_PATH="coverage/ds_python$rate_cls.coverage" NAME="rate_cls Coverage Results" MODIFIED="1733165885458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ds_python$rs_queries.coverage" NAME="rs_queries Coverage Results" MODIFIED="1768081119301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recommedation_systems/rs_hands_on" />
     <SUITE FILE_PATH="coverage/ds_python$testqqq_job.coverage" NAME="testqqq_job Coverage Results" MODIFIED="1756372629287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_job" />
-    <SUITE FILE_PATH="coverage/ds_python$.coverage" NAME=" Coverage Results" MODIFIED="1756372713709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_job" />
-    <SUITE FILE_PATH="coverage/ds_python$designer_cls.coverage" NAME="designer_cls Coverage Results" MODIFIED="1756371536915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ds_python$module_2.coverage" NAME="module_2 Coverage Results" MODIFIED="1730396076327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ds_python$module_6.coverage" NAME="module_6 Coverage Results" MODIFIED="1732285287688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ds_python$pd_module_1.coverage" NAME="pd_module_1 Coverage Results" MODIFIED="1734361576926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pandas_python/pd_module_1" />
     <SUITE FILE_PATH="coverage/ds_python$main.coverage" NAME="main Coverage Results" MODIFIED="1729893552679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ds_python$module_5.coverage" NAME="module_5 Coverage Results" MODIFIED="1732045977845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ds_python$.coverage" NAME=" Coverage Results" MODIFIED="1756372713709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_job" />
+    <SUITE FILE_PATH="coverage/ds_python$module_4.coverage" NAME="module_4 Coverage Results" MODIFIED="1731724166671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ds_python$designer_cls.coverage" NAME="designer_cls Coverage Results" MODIFIED="1756371536915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ds_python$test.coverage" NAME="test Coverage Results" MODIFIED="1745573423878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SQL/sql_module_final" />
   </component>
 </project>
