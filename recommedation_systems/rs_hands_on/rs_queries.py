@@ -5,9 +5,7 @@ import re
 
 import pymorphy3
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.preprocessing import StandardScaler
 from sklearn.metrics.pairwise import cosine_similarity
-import numpy as np
 
 
 class RsQueries:
@@ -16,13 +14,14 @@ class RsQueries:
         self.morph = pymorphy3.MorphAnalyzer(lang='ru')
 
     def eda(self):
-        self.df = self.df.drop(columns=["loaded_at"])
-        print(self.df.info())
-        print(self.df.describe())
+        df_eda = self.df.copy()
+        df_eda = df_eda.drop(columns=["loaded_at"])
+        print(df_eda.info())
+        print(df_eda.describe())
 
         queries_count = (
             (
-                self.df[["date", "sku", "query"]]
+                df_eda[["date", "sku", "query"]]
                 .groupby(["date", "sku"])
                 .count()
                 .sort_values(by=["query"], ascending=False)
@@ -39,16 +38,16 @@ class RsQueries:
             else:
                 return "low"
 
-        self.df = self.df.merge(queries_count, on=["date", "sku"], how="inner")
-        self.df["sku_freq_category"] = self.df["queries_count"].apply(
+        df_eda = df_eda.merge(queries_count, on=["date", "sku"], how="inner")
+        df_eda["sku_freq_category"] = df_eda["queries_count"].apply(
             queries_freq_categ
         )
-        self.df["query_len"] = self.df["query"].astype(str).str.len()
+        df_eda["query_len"] = df_eda["query"].astype(str).str.len()
 
-        self.df["has_order"] = (self.df["order_count"] > 0).astype(int)
-        self.df["has_gmv"] = (self.df["gmv"] > 0).astype(int)
+        df_eda["has_order"] = (df_eda["order_count"] > 0).astype(int)
+        df_eda["has_gmv"] = (df_eda["gmv"] > 0).astype(int)
 
-        eda_chart_df = self.df.copy()
+        eda_chart_df = df_eda.copy()
         agg_method = {
             "view_conversion": lambda x: (x > 0).sum(),
             "unique_search_users": "sum",
@@ -72,7 +71,7 @@ class RsQueries:
             * 100
         ).round(2)
 
-        return eda_chart_df, self.df
+        return eda_chart_df, df_eda
 
     def eda_plot(self):
         eda_chart_df, _ = self.eda()
@@ -254,6 +253,86 @@ class RsQueries:
         similar.to_excel('similar_skus_by_top_query.xlsx', index=False)
         return similar[['sku', 'query_cluster_repr', 'similarity']]
 
+    # Модель 3: Коллаборативная фильтрация (Collaborative Filtering)
+    def build_interaction_matrix(self):
+        df_sim = self.cluster_similar_queries()
+        df_sim = df_sim[df_sim['position'] > 0].copy()
+        df_sim['relevance'] = 1 / (df_sim['position'] + 1)
+
+        interaction_matrix = df_sim.pivot_table(
+            index='query_cluster_repr',
+            columns='sku',
+            values='relevance',
+            fill_value=0
+        )
+
+        return interaction_matrix
+
+    def get_similar_skus_collab(self, target_sku, top_n=5):
+        interaction_matrix = self.build_interaction_matrix()
+
+        target_vec = interaction_matrix[target_sku].values.reshape(1, -1)
+        all_vecs = interaction_matrix.values.T  # транспонируем: теперь строки = SKU
+        similarities = cosine_similarity(target_vec, all_vecs).flatten()
+
+        similar_df = pd.DataFrame({
+            'sku': interaction_matrix.columns,
+            'similarity': similarities
+        })
+
+        similar = (
+            similar_df[similar_df['sku'] != target_sku]
+            .sort_values('similarity', ascending=False)
+            .head(top_n)
+        )
+
+        similar.to_excel('similar_skus_collab.xlsx', index=False)
+        return similar
+
+    # Модель 4: Гибридная модель (Hybrid Model)
+    def get_full_cbf_similarity(self):
+        sku_names, tfidf_matrix, _ = self.build_text_profiles()
+        similarity_matrix = cosine_similarity(tfidf_matrix)
+        return pd.DataFrame(
+            similarity_matrix,
+            index=sku_names['sku'],
+            columns=sku_names['sku']
+        )
+
+    def get_full_cf_similarity(self):
+        interaction_matrix = self.build_interaction_matrix()
+
+        item_vectors = interaction_matrix.T
+        similarity_matrix = cosine_similarity(item_vectors)
+        return pd.DataFrame(
+            similarity_matrix,
+            index=item_vectors.index,
+            columns=item_vectors.index
+        )
+
+    def get_hybrid_recommendations(self, target_sku, top_n=5, weight_cbf=0.6, weight_cf=0.4):
+        cbf_sim = self.get_full_cbf_similarity()
+        cf_sim = self.get_full_cf_similarity()
+
+        common_skus = cbf_sim.index.intersection(cf_sim.index)
+        cbf_scores = cbf_sim.loc[target_sku, common_skus]
+        cf_scores = cf_sim.loc[target_sku, common_skus]
+
+        hybrid_scores = weight_cbf * cbf_scores + weight_cf * cf_scores
+
+        hybrid_scores = hybrid_scores.drop(target_sku, errors='ignore')
+        top_skus = hybrid_scores.sort_values(ascending=False).head(top_n)
+
+        result = pd.DataFrame({
+            'sku': top_skus.index,
+            'hybrid_similarity': top_skus.values,
+            'cbf_similarity': cbf_scores[top_skus.index].values,
+            'cf_similarity': cf_scores[top_skus.index].values
+        })
+
+        result.to_excel('hybrid_recommendations.xlsx', index=False)
+        return result
+
 if __name__ == "__main__":
     df = pd.read_csv("ozon_product_queries_details.csv")
 
@@ -261,4 +340,6 @@ if __name__ == "__main__":
     # df_mod = rs_model.eda()
     # rs_model.eda_plot()
     # rs_model.cluster_similar_queries()
-    rs_model.get_similar_skus(1614691389, top_n=10)
+    # rs_model.get_similar_skus(1614691389, top_n=10)
+    # rs_model.get_similar_skus_collab(775129914, top_n=10)
+    rs_model.get_hybrid_recommendations(1614691389,top_n=5,weight_cbf=0.6,weight_cf=0.4)
