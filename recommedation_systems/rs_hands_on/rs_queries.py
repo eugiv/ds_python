@@ -383,8 +383,6 @@ class RsQueries:
         sales_queries = df_sim[df_sim["order_count"] > 0]
         for query, group in sales_queries.groupby("query_cluster_repr"):
             relevant_skus = set(group["sku"].unique())
-            if len(relevant_skus) < 2:
-                continue
 
             for sku in relevant_skus:
                 recs_df = model(sku, top_n=top_n)
