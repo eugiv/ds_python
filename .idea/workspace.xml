@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="changes">
-      <change beforePath="$PROJECT_DIR$/computer_vision/hw_2/hw_2006-dogs-vs-cats.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/computer_vision/hw_2/hw_2006-dogs-vs-cats.ipynb" afterDir="false" />
+    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="cleaned ipynb output">
+      <change afterPath="$PROJECT_DIR$/nlp/HW1_banki_TM_and_classification.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nlp/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nlp/banki_responses.json.bz2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,62 +50,62 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Database Script.m2-utf8.sql.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_job.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.designer_cls.executor&quot;: &quot;Run&quot;,
-    &quot;Python.habr_scrap.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_4.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_6.executor&quot;: &quot;Run&quot;,
-    &quot;Python.module_7.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pd_module_1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.rate_cls.executor&quot;: &quot;Run&quot;,
-    &quot;Python.rs_queries.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sometest.executor&quot;: &quot;Run&quot;,
-    &quot;Python.stepik_test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.testqqq_job.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;Excel (xlsx)&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/eugene_ivanov/PycharmProjects/ds_python/computer_vision/hw_2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Database Script.m2-utf8.sql.executor": "Run",
+    "Python tests.Python tests in test_job.py.executor": "Run",
+    "Python.designer_cls.executor": "Run",
+    "Python.habr_scrap.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.module_2.executor": "Run",
+    "Python.module_3.executor": "Run",
+    "Python.module_4.executor": "Run",
+    "Python.module_5.executor": "Run",
+    "Python.module_6.executor": "Run",
+    "Python.module_7.executor": "Run",
+    "Python.pd_module_1.executor": "Run",
+    "Python.rate_cls.executor": "Run",
+    "Python.rs_queries.executor": "Run",
+    "Python.sometest.executor": "Run",
+    "Python.stepik_test.executor": "Run",
+    "Python.test (1).executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.testqqq_job.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ai.playground.ignore.import.keys.banner.in.settings": "true",
+    "database.data.extractors.current.export.id": "Excel (xlsx)",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/eugene_ivanov/PycharmProjects/ds_python/nlp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "database.query.execution",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;RunConfigurationTargetLRU&quot;: [
-      &quot;f4675c57-1372-453e-9273-fc3ed2aaf46a/database/\&quot;postgres\&quot;/schema/\&quot;public\&quot;&quot;
+    "RunConfigurationTargetLRU": [
+      "f4675c57-1372-453e-9273-fc3ed2aaf46a/database/\"postgres\"/schema/\"public\""
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
-      &quot;PostgreSQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "PostgreSQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/nlp" />
       <recent name="$PROJECT_DIR$/computer_vision/hw_2" />
       <recent name="$PROJECT_DIR$/computer_vision/hw_1" />
       <recent name="$PROJECT_DIR$/computer_vision" />
       <recent name="$PROJECT_DIR$/recommedation_systems/rs_hands_on" />
-      <recent name="$PROJECT_DIR$/time_series" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/computer_vision/hw_2/data/train_sample" />
@@ -515,7 +518,9 @@
       <workItem from="1770622914857" duration="472000" />
       <workItem from="1771942934471" duration="2108000" />
       <workItem from="1771945051647" duration="17345000" />
-      <workItem from="1771962668457" duration="690000" />
+      <workItem from="1771962668457" duration="1868000" />
+      <workItem from="1772005178641" duration="663000" />
+      <workItem from="1775030635621" duration="2451000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
@@ -613,7 +618,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771962712843</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="cleaned ipynb output">
+      <option name="closed" value="true" />
+      <created>1771963436605</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1771963436605</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -627,7 +640,8 @@
     <MESSAGE value="start stat_module_3" />
     <MESSAGE value="stat_module_3 changes" />
     <MESSAGE value="changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes" />
+    <MESSAGE value="cleaned ipynb output" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned ipynb output" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ds_python$stepik_test.coverage" NAME="stepik_test Coverage Results" MODIFIED="1760651532248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/feature_engeneering" />
