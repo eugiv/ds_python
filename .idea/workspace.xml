@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="cleaned ipynb output">
-      <change afterPath="$PROJECT_DIR$/nlp/HW1_banki_TM_and_classification.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nlp/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nlp/banki_responses.json.bz2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0d7f570d-1d24-43a0-8e53-b664be1c5755" name="Changes" comment="cleaned ipynb output" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -520,7 +515,7 @@
       <workItem from="1771945051647" duration="17345000" />
       <workItem from="1771962668457" duration="1868000" />
       <workItem from="1772005178641" duration="663000" />
-      <workItem from="1775030635621" duration="2451000" />
+      <workItem from="1775030635621" duration="11885000" />
     </task>
     <task id="LOCAL-00001" summary="classes hw">
       <option name="closed" value="true" />
